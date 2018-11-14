@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        //js
+        //map 只能便利数组不能便利维数组
+        //each map的区别  
+        var arr = [1, 2, 22, 2, 3, 4, 5, 2, 2]
+        var obj = { 0: 1, 1: 2, 2: 3, 3: 4 }
+        // 原声写法
+        // arr.forEach(function(val,inx){
+        //     console.log(val,inx);
+        // })
+        
+        //jq
+        var ii = $.each(arr,function(val,inx){
+            
+        })
+        var i = $.map(obj, function (val, inx) {
+            // console.log(val, inx);
+            return val + "__" + inx
+           
+        })
+        // $.each(arr,function(inx,val){
+        //     console.log(inx,val);
+        // })
+        console.log(i,"map")
+        console.log(ii,"each")
+    </script>
+</body>
+
+</html>

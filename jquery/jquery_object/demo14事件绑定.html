@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+            //jq两种绑定事件的方式  
+            //eventName(fn)
+            //on(eventName,fn)
+            //事件移除off   参数 会移除指定的事件  
+            $("button").onclick(function(){
+                    laert("sad")
+            })
+            $("button").off();
+            
+        })
+    </script>
+    <button>事件</button>
+</body>
+</html>

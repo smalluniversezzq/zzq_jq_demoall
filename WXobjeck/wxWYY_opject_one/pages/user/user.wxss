@@ -1,0 +1,62 @@
+/* pages/user/user.wxss */
+.containers{
+  width: 100%;
+  min-height:667rpx;
+  /* background: red; */
+  
+}
+.portaitCon{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.portaitBg{
+  width: 100%;
+  height: 100%;
+}
+.portaitGroup{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50rpx;
+  margin-top: -50px;
+  text-align: center;
+}
+.username_box{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.username_box image{
+  width: 100%;
+  height: 100%;
+}
+.username{
+  color: #ffffff;
+}
+.switcher{
+  padding:30rpx 20rpx 0 20rpx;
+
+}
+.weather_text{
+  padding: 30rpx 0 0 20rpx;
+  font-size: 30rpx;
+  }
+.dis_flex{
+  display: flex;
+  justify-content:space-between;
+}
+.settingItem{
+  border-bottom:1rpx solid #eee;
+  padding-bottom: 10rpx;
+}
+.gonglue_img{
+  width: 20px;
+  height: 20px;
+}
+
+
+
+

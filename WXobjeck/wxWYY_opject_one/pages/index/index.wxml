@@ -1,0 +1,5 @@
+      
+<!-- <navigator url="../home/home"  open-type="navigete">navigator</navigator> -->
+<view bindtap="switchTabs">login</view>
+<view>
+</view>

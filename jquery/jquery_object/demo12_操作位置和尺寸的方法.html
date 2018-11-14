@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            position: relative;
+            width:200px;
+            height: 200px;
+            background:red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        $(function(){
+            // offset  获取元素离窗口的偏移位
+            var btn = document.getElementsByTagName("button");
+            btn[0].onclick=function(){
+                console.log("命中了")
+                console.log($(".father").offset().left,"father");
+                console.log($(".son").offset().left,"son");
+            }
+            btn[1].onclick=function(){
+                console.log("命中了设置")
+                $(".son").offset({
+                    left:20
+                })
+            }
+            // position 获取元素离定位元素的偏移位
+            
+        })
+    </script>
+    <div class="father">
+        <div class="son">
+            <div class="">
+
+            </div>
+        </div>
+    </div>
+    <button>获取</button>
+    <button>设置</button>
+</body>
+</html>

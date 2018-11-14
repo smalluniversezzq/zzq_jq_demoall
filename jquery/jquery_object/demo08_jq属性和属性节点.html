@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性和属性节点</title>
+    <style>
+        .imgs{
+            width: 300px;
+        }
+    </style>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        /*
+            1.什么是属性
+            var p = new Person();
+            p["name"] = "znj";
+            2.如何操作属性
+             attr
+              $("img").attr("width","180");
+              $("img").attr("width")
+             removeattr
+              $("p").removeAttr("id");  移除id属性
+             prop 方法
+             removeProp 方法
+            提示：如需检索 HTML 属性，请使用 attr() 方法代替。
+            提示：如需移除属性，请使用 removeProp() 方法。
+            3.什么是属性节点
+            <span name="zhuzhiqiang"></span> 
+            attributes 属性 下面都是属性节点
+            4.操作属性节点
+            5.属性和属性节点有什么区别
+        */
+        $(function () {
+            var span = document.getElementsByTagName("span")[0];
+            console.log(span)
+            span.setAttribute("name", "lnj");
+            span.setAttribute("class","xiugai info em h2")
+            console.log(span)
+            console.log($(".imgs").attr("src"),"attr","width")
+        })
+        // console.log(span.getAttribute("name"));
+    </script>
+    <span name="asdadsa" class="asd">
+    </span>
+    <img class="imgs" src="timg.jpg" alt="">
+</body>
+
+</html>

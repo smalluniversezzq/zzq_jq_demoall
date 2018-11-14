@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+            //什么是事件委托 请别人帮忙做事情，然后将做完的结果反馈给我们
+            $("button").click(function(){
+                $("ul").append("<li>新增的li</li>");
+            })
+            $("ul").delegate("li","click",function(){
+                console.log($(this).html())
+            })
+        })
+    </script>
+    <ul>
+        <li>我是第一个li</li>
+        <li>我是第二个li</li>
+        <li>我是第三个li</li>
+    </ul>
+    <button>新增</button>
+</body>
+</html>

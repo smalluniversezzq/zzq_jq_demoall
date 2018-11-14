@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+
+<body>
+    <script>
+        //jq的静态方法;
+        // function Aclass(){
+        // };
+        // Aclass.staticMethod = function(){
+        //     alert("21323");
+        // }
+        // Aclass.staticMethod();
+    //jq的实例方法  
+        function Bclass(){
+
+        };
+        Bclass.prototype.instanceMethod = function(){
+            alert("123098");
+        }
+        var a = new Bclass();
+            a.instanceMethod()
+        /*
+        对象
+        
+        */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>stop  delay</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+
+    }
+    .one{
+        width: 100px;
+        height: 100px;
+        background: #00aaee;
+    }
+    .tow{
+        width: 500px;
+        height: 10px;
+        background:#aa00ee;
+    }
+    </style>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+            $("button").eq(0).on("click",function(){
+                console.log("123")
+                $(".one").animate({
+                    width:500,
+                    height:500
+                },2000).delay(4000).animate({
+                    width:700,
+                    height:700
+                },3000)
+            })
+        })
+    </script>
+    stop() 方法立即终止之前的动画 执行当前的动画
+    <button>方法一</button><button>方法二</button>
+    <div class="container">
+        <div class="one">
+        </div>
+        <div class="tow">
+        </div>
+    </div>
+</body>
+</html>

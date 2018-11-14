@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+           //自定义事件
+           $(".son").on("myclick",function(){
+               alert("myclick")
+           }) 
+           $(".son").trigger("myclick")
+        })
+    </script>
+    <div class="son">
+        ``````lkjhgfds
+    </div>
+    <!-- 事件命名空间 -->
+    <div class="zs">
+        事件命名空间
+    </div>
+</body>
+</html>

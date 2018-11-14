@@ -1,0 +1,20 @@
+<!--logs.wxml-->
+<view class="container">
+  <!-- <view class="oder1"></view>
+  <view class="oder1"></view>
+  <view class="oder1"></view> -->
+  <view>{{list}}</view>
+  <view> 列表渲染</view>
+  <!-- <view wx:for="{{array}}" wx:for-index="inx" wx:for-item="itemName">
+    {{inx}}: {{itemName}}
+  </view> -->
+  <view>条件渲染</view>
+  <view wx:if="{{shows}}">1232131</view>
+  <view wx:if="{{numbers<5}}">小5</view>
+  <view wx:elif="{{numbers>5}}">da5</view>
+  <view wx:else>=5</view>
+  <view>事件微信小程序</view>
+  <view>{{numbers}}</view>
+  <button bindtap="leiJia"> ++++ </button>
+   <button bindtap="jianjian"> ---- </button>
+</view>

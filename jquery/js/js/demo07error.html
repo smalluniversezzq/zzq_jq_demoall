@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>error处理</title>
+</head>
+<body>
+    <div class="demo" onclick="message()">clickme</div>
+    <input type="text" class="int">
+    <button onclick="mf()">验证</button>
+    <div class="exp"></div>
+    <script>
+        //throw 允许自定义错误 术语：创建或抛出异常 （exception）
+        var txt = "" ;
+        function message(){
+            try{
+                alaaaert("welcome guest!!")
+                }catch(err){
+                    txt = "本页有个错误。\n\n" ;
+                    txt += "错误描述:" + err.message + "\n\n" ;
+                    txt += "点击确认继续。 \n\n";
+                    alert(txt) 
+            }
+        }
+        // 栗子2""
+        function mf(){
+            var x = document.querySelector(".int").value;
+            console.log(x);
+            try{
+                if(x == ""){
+                    throw "值为空！"
+                }else if(isNaN(x)){
+                    throw "不是数字" ;
+                }else if(x > 10){
+                    throw "大了" ;
+                }else if(x < 5){
+                    throw "小了" ;
+                }   throw "正确" ;
+            }catch(err){
+                document.querySelector(".exp").innerHTML="错误" + err + ".";
+            }
+        }
+    </script>
+    
+</body>
+</html>

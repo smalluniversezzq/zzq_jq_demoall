@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jq的基础结构</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        //jq 让外界访问到自定义的局部变量
+        (function(window,undefind){
+           var JQuery=function(){
+                return new jQuery.prototype.init();
+            }
+            jQuery.prototype ={
+                constructor : jQuery
+            }
+            console.log(jQuery.prototype)
+            window.jQuery = window.$ = jQuery;
+        })(window);
+        //jq为什么要传window这个参数 方便后期压缩
+        //jq为什么要传undefind这个参数 方便后期压缩
+        var num =10;
+        function f3(){
+            var num = 30;
+            console.log(num)
+        }
+        f3()
+        undefined = 998;
+        console.log(undefined)
+    </script>
+</body>
+</html>

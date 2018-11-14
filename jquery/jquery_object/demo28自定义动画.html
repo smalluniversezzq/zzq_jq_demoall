@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义动画animate</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background: #00aaee;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background: #aa00ee;
+        }
+    </style>
+</head>
+<body>
+    animate接受四个参数
+    第一个参数:接受一个对象，在对象中修改属性
+    第二个参数:指定动画时长
+    第三个参数:指定动画节奏 linear 匀速  swing  缓动  
+    第四个参数:动画执行完毕后的回调函数
+    <script>
+        $(function(){
+            $("button").eq(0).click(function(){
+                $(".box1").animate({
+                    width:1000,
+                    height:1000
+                },1000,function(){
+                    console.log("执行完毕")
+                })
+            })
+            $("button").eq(1).click(function(){
+                $(".box1").animate({
+                    width:500,
+                    height:500
+                },5000,function(){
+                    console.log("执行完毕")
+                })
+            })
+        })
+    </script>
+    <div class="cantainer">
+        <div class="box1">
+
+        </div>
+        <div class="box2">
+                
+       </div>
+      
+    </div>
+    <div >
+        <button>执行1</button>
+        <button>执行2</button>
+        <button>执行3</button>
+    </div>
+</body>
+</html>

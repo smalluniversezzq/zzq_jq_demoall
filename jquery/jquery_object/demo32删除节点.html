@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>remove empty</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+            /*
+            删除指定节点
+            remove()
+            删除指定节点的内容 
+            empty()
+            */
+            $("button").click(function(){
+                // $("li").remove();
+                $("li").empty();
+            })
+        })
+    </script>
+    <div class="container">
+        <ul>
+            <li>节点</li>
+            <li>节点</li>
+            <li>节点</li>
+            <li>节点</li>
+            <li>节点</li>
+            <li>节点</li>
+            <li>节点</li>
+            <li>节点</li>
+        </ul>
+    </div>
+    <button>删除</button>
+
+</body>
+</html>

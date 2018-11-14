@@ -1,0 +1,44 @@
+react native 项目搭建
+https://reactnative.cn/docs/0.51/getting-started.html
+
+
+
+http://wiki.jikexueyuan.com/project/react-native/getting-started.html
+
+react_native 地址
+
+
+
+react native  优点
+跨平台  低投入高回报 性能高(比html+view性能高)   支持动态更新
+不仅不可在ios 还可以android在
+
+
+环境
+1 node.js
+2 react native command line  （）
+3 android studio/xcode
+在window搭建开发环境
+1安装node.js
+2 react命令行工具  npm install -g react-native-cli  
+3 查看react native 命令行工具      react-native --help
+4 安装androidStudio   在官网下载 https://developer.android.google.cn/  下载androidstudio
+5 初始化react native项目  react-native init FirstApp(项目名) 
+6 设置npm淘宝镜像服务器(初始项目速度提高) NPM 安装目录当中找到node.js文件夹 >moduls>npmrc 添加registry = https://registry.npm.taobao.org
+7 运行 react native 项目 
+  ios    react-native run-ios      运行
+android  react-native run-android  运行
+8 安卓模拟器
+
+
+
+
+
+
+
+
+
+
+
+
+

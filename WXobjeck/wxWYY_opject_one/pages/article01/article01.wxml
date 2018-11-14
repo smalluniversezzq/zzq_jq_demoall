@@ -1,0 +1,16 @@
+<view class="containers">
+  <view class="articleCon">
+    <image src="{{article.picUrl}}" class="articleImg" mode='widthFix'></image>
+    <text class="title">{{article.title}}</text>
+    <text class="content" decode="true">{{article.content}}</text>
+  </view>
+  <view class="card">
+    <text class="likeHead">猜你喜欢</text>
+    <scroll-view scroll-x="true" class="likeCom">
+      <view wx:for="{{likeList}}" class="likeItem">
+        <image class="likeImg" src="{{item.imgUrl}}" mode="aspectFit"></image>
+        <view class="likeTitle">{{item.title}} </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+.container{
+  /* display: flex; */
+}
+.oder1{
+  width:300rpx;
+  height: 200rpx;
+  background: red;
+  margin: 10px 0 0 0 ;
+}

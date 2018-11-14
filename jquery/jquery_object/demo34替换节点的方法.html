@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浅复制节点</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        /*clone  false 浅复制  true深复制
+        区别 浅复制只能复制元素 不能复制事件   
+            深复制可以复制元素 可以复制事件
+        */
+        $(function(){
+            $("button").eq(0).click(function(){
+                console.log("asd")
+                let $list = $("ul > li:first").clone(false);
+                $("ul").append($list);
+            })
+            $("button").eq(1).click(function(){
+                let $list = $("ul > li:first").clone(true);
+                $("ul").append($list);
+            })
+            $(".line").click(function(){
+                console.log("321");
+            })
+        })
+    </script>
+    <button>浅复制节点</button>
+    <button>深复制</button>
+    <div>
+        <ul>
+            <li class="line">节点</li>
+            <li>节点</li>
+            <li>节点</li>
+            <li>节点</li>
+            <li>节点</li>
+        </ul>
+    </div>
+</body>
+</html>

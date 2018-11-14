@@ -1,0 +1,14 @@
+<view class="containers">
+  <image class="bgImg" src="{{bgImgUrl}}"></image>
+  <view class="fromgroup">
+    <form bindsubmit="submitForm">
+      <input bindblur="getname" name="username" placeholder='   请输入用户名' class="int"></input>
+      <input bindblur="getpwd" name="userpwd" placeholder='   请输入密码' class="pwd" type="password"></input>
+      <view class="btnGroup">
+        <button bindtap="setInfo" form-type="reset">注册</button>
+        <button form-type="submit">登录</button>
+      </view>
+    </form>
+
+  </view>
+</view>

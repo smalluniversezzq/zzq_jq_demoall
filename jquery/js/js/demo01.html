@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript</title>
+</head>
+<body>
+    <div id="demo" >000</div>
+    <button onclick="">123</button>
+
+    <script>
+        // web 技术栈 vue es6 理解http协议 调试 性能优化 web安全  工程化   小程序      Highcharts   Echarts 
+        // 移动开发经验  第三方登录授权 本地存储 缓存处理 
+        // vue 组件通信 vue指令 生命周期 计算属性 
+
+        // document.getElementById("demo").innerHTML=123e3;
+        // 数据类型 ：数字Number 字符串String 布尔Boolean 数组Array 对象Object 空null 未定义 Undefined ？？javascript 字符集 Unicode
+        // break 跳出循环 catch 语句块  continue 跳出循环中的一个迭代
+        // do...while 执行一个语句块，在条件语句为true时继续执行该语句块
+        // 字符串方法 掌握  
+        // concat() 链接两个或多个字符串，返回链接后的字符串         
+        // split() 把字符串切割成字符串数组
+        // charAt()  指定索引位置的字符
+        // replace() 替换正则匹配的字符串
+        // slice() 提取字符串片段在新的字符串中返回被提取的结果
+        // substr() 从起始索引提取字符串中指定数目的字符
+        // substring()提取字符串中两个指定的索引号之间的字符
+        // toString() 返回字符串的对象值
+        // trim() 移除字符串首 尾的空白
+        // match()  找到一个或多个正则匹配的值
+        // search() 检索正则匹配的值
+        // valueOf() 返回某个字符串对象的原始值
+        // **
+        // toLowerCase() 字符串转小写
+        // toUpperCase() 字符串转大写 
+        // 逻辑运算读法
+        // && and   || or    ! not
+        // 循环 
+        // 1 for 循环代码块一定次数
+        // 2 for/in 循环便利对象的属性
+        // 3 while 当执行条件为true时循环指定的代码块
+        // 4 do/while 同样当指定的条件为true时循环指定的代码块
+        // 操作符typeOf  监测数据类型     demo03 例子
+        // null Undefined 区别  null===undefined false , null==undefined true , typeof undefined = indefined , typeof null onjeck
+        // js类型转换
+        // 数据类型 string number boolean objeck function 
+        // 对象类型 objeck array date
+        // 不包含任何值得类型 null undefined
+        // constructor 返回所有js变量的构造函数    demo04 例子
+        // *****
+        // String() 将数字转换为字符串 该方法用于任何类型的数字 字母 变量 表达式
+        // toString() 
+        // toFixed() 把数字转为字符串，结果的小数点后有指定位数的数字  toFixed(2) 保留小数点后两位
+        // 布尔值转字符串
+        //  **
+        // String(true) String(false) "true" "false" false.toString() true.toString() "true" "false"
+        // 日期转字符串
+        // ***
+        // getDate() 返回一个月中某一天
+        // getFullYeay() 以四位数字返回年份
+        // getMouth() 月份（0-11） 月份+1
+        // getDay() 返回一周中某一天
+        // getHours() 小时
+        // getMinutse() 分钟
+        // getSeconds() 秒
+        // getMilliseconds() 毫秒 
+        // getTime() 返回1970 1 1 至今的毫秒数
+        // 正则  regexp **
+        // i 执行对大小写不敏感的匹配 g执行全局匹配 m执行多行匹配
+        // test() 检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回true 否则返回false   demo06
+        // exec 检索字符串中的正则表达式的匹配 返回一个数组,其中存放匹配结果。如果未找到匹配,则返回null。 demo06
+        // 错误 **
+        //  try throw 当错误发生时js引擎会停止，并生成一个错误信息 try 定义在执行时进行错误测试的代码块。 catch 当try代码发生错误时执行的代码块 try cstch是成对出现的 demo07
+        //  throw 允许自定义错误 术语：创建或抛出异常 （exception） throw与try 和 catch一起使用 能够控制程序流生成自定义错误信息 demo07栗子2
+        // 严格模式 
+        // js使用误区 js是以64位浮点数存储的 var x = 0.1,y = 0.2,z = x + y ; if(z = 0.3) //false  z = 0.30000000000004
+        // 解决 var z = (x*10 + y*10)/10   //   0.3
+
+        var txt = "asdfghjkqwerpoiuyzmxncbv";
+        var txts = "lkjhgfdsa";
+        var text = txt.concat(txts);
+        console.log(txt.length,txts.length,text.length)
+        console.log(text,"text");
+        var sin = txt.length;
+        console.log(sin);
+    </script>
+</body>
+</html>

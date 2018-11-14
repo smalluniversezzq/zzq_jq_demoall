@@ -1,0 +1,66 @@
+/* pages/blog/blog.wxss */
+.blogText{
+  font-size: 30rpx;
+  margin: 20rpx;
+}
+.pic{
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+}
+.preImg{
+  width: 400rpx;
+  height: 400rpx;
+}
+.border_b{
+  border-bottom:1px solid #eee;
+}
+.pic_logo{
+  width: 60rpx;
+  height: 60rpx;
+}
+.v-align{
+  line-height: 30rpx;
+  display: flex;
+  margin-top: 20rpx;
+  
+  /* display:table-cell; vertical:middle; height:70rpx; */
+}
+.settingItem{
+  display: flex;
+  justify-content: space-between;
+}
+.logImg{
+  width: 100%;
+}
+.picrt{
+  margin: 20rpx 20rpx 0 0;
+  width: 40rpx;
+  height:40rpx;
+}
+.v-align > view{
+  line-height:60rpx;
+}
+.alignRt > button{
+  background: #e4393c;
+  color: #fff;
+  float: right;
+  margin:10rpx 20rpx 0 0 ;
+}
+.cont_box{
+  display: flex;
+  padding: 20rpx;
+}
+
+.togTime{
+  width: 20%;
+}
+.content{
+  width:80%;
+}
+.logTxt{
+  border-bottom: 1px solid #eee;
+}
+.logLoc{
+  color: #888;
+}

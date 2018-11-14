@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../../jquery/jquery-2.1.4.js"></script>
+    <style>
+        img {
+            display: block;
+            width: 20%;
+            margin: 0 auto;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+    <img src="../../timg.jpg" data-src="http://img.my.csdn.net/uploads/201709/04/1504507669_8563.jpg" alt="">
+</body>
+<script>
+    function lazyload(event) {
+        var n = 0, imgNum = $("img").length, img = $('img');
+        setTimeout(function () {
+            for (var i = n; i < imgNum; i++) {
+                //当前的img 显示了
+                console.log(img.eq(i).offset().top, i, "__", parseInt($(window).height()), parseInt($(window).scrollTop()))
+                if (img.eq(i).offset().top < parseInt($(window).height()) + parseInt($(window).scrollTop())) {
+                    //img的src=默认图片
+                    if (img.eq(i).attr("src") == "../../timg.jpg") {
+                        //保存自定义属性
+                        var src = img.eq(i).attr("data-src");
+                        //设置src为自定义属性
+                        img.eq(i).attr("src", src);
+                        // n =当前图片+1
+                        n = i + 1;
+                    }
+                }
+            }
+        }, 3000)
+
+    }
+    // lazyload()
+    // 节流函数 fun delay time
+    function throttle(fun, delay, time) {
+        var timeout,
+            startTime = new Date();
+        console.log(startTime, "startTime");
+        return function () {
+            var context = this,
+                args = arguments,
+                curTime = new Date();
+            console.log(curTime, "curTime")
+            clearTimeout(timeout);
+            if (curTime - startTime >= time) {
+                fun.apply(context, args);
+                startTime = curTime;
+            } else {
+                timeout = setTimeout(fun, delay);
+            }
+            console.log("_________________", delay, "delay", time, "time")
+        };
+
+    };
+    window.addEventListener("load", function () {
+        lazyload();
+    });
+    window.addEventListener('scroll', throttle(lazyload, 200, 1000));
+</script>
+
+</html>

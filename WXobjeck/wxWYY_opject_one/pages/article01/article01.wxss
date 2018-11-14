@@ -1,0 +1,57 @@
+.containers{
+  background: #eee;
+
+}
+.articleCon{
+  background: #fff;
+}
+.articleImg{
+  width: 100%;
+}
+.title{
+  display: block;
+  margin: 20rpx 20rpx;
+  text-align: center;
+  color: #1ed9fb;
+  border-bottom: 2rpx solid #1ed9fb; 
+  font-size: 40rpx;
+}
+.content{
+  display: block;
+  font-size: 30rpx;
+
+  margin: 20rpx 20rpx;
+}
+.card{
+  margin-top: 20rpx;
+  background: #fff;
+   
+}
+.likeHead{
+  margin: 30rpx;
+  color: #1ed9fb;
+   line-height: 30rpx;
+   font-size: 30rpx;
+}
+.likeCom{
+  width: 100%;
+  height: 120px;
+  /* 禁止换行 */
+  white-space: nowrap;  
+  margin-top: 10px;
+}
+.likeItem{
+  display: inline-block;
+  width: 182px;
+  text-align: center
+}
+.likeImg{
+  width: 174px;
+  height:100px;
+  margin-right: 5px;
+}
+.likeTitle{
+  font-size: 12px;
+  text-align: center;
+  color: #96bfe3;
+}

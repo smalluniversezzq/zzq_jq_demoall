@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: yellow;
+
+        }
+        .son{
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        $(function(){
+            /*
+            什么是事件冒泡
+            阻止事件冒泡行为
+            */
+            $(".father").click(function(){
+                alert("father");
+            })
+            $(".son").click(function(event){
+                alert("son")
+                //方法1
+                //  return false
+                event.stopPropagation();
+               
+            })
+                /*
+                    默认事件
+                    阻止默认事件
+                */
+                // return false  阻止默认行为
+                //  event.preventDefault
+            
+
+
+        })
+    </script>
+    <div class="father">
+        <div class="son">
+
+        </div>
+    </div>
+</body>
+</html>

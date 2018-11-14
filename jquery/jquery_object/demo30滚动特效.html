@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+           margin: 100px auto; 
+           width: 600px;
+           height: 170px;
+           border: 1px solid #000;
+           overflow: hidden;
+        }
+        ul{
+            list-style: none;
+            width: 1800px;
+        }
+        ul > li{
+            width: 300px;
+            float: left;
+            overflow: hidden;
+        }
+        img{
+            width: 300px;
+        }
+        .box{
+            background: #000;
+        }
+        .container{
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        $(function(){
+            var timer
+            var setnum = 0;
+            setinval() 
+            function setinval(){
+                timer= setInterval(function(){
+                    setnum += -3;
+                    if(setnum <= -1200){
+                        setnum = 0;
+                    }
+                    $(".box").css("margin-left",setnum);
+                    },50)
+                }
+            
+            $("li").hover(function(){
+                clearInterval(timer);
+                
+                $(this).siblings().stop().fadeTo(1000,0.4);
+                $(this).stop().fadeTo(1000,1);
+            },function(){
+                setinval() 
+                $("li").stop().fadeTo(1000,1)
+            })
+        })
+    </script>
+    <div class="container">
+        <ul class="box">
+            <li><img src="image/1.jpg" alt=""></li>
+            <li><img src="image/2.jpg" alt=""></li>
+            <li><img src="image/3.jpg" alt=""></li>
+            <li><img src="image/4.jpg" alt=""></li>
+            <li><img src="image/1.jpg" alt=""></li>
+            <li><img src="image/2.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

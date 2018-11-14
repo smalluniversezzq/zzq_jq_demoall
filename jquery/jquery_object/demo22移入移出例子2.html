@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+    <style>
+        *{
+            margin: 0 ;
+            padding: 0;
+        }
+        .cantainer{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+        li{
+            list-style: none;
+        }
+        .tab{
+            width: 300px;
+            display: flex;
+        }
+        .tab > li{
+            width: 25%;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background: #00aaee;
+        }
+        .tab_content{
+            width: 300px;
+            height: 250px;
+            overflow: hidden;
+        }
+        .tab_content > li{
+            width: 300px;
+            height: 250px;
+        }
+        .tab_content > li > img{
+            width: 100%;
+        }
+        .tab > .bg_color{
+            background: blue;
+        }
+        .tab_content > li {
+            display: none;
+        }
+        .tab_content > .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        $(function(){
+            $(".tab > li").click(function(){
+                $(this).addClass("bg_color");
+                $(this).siblings().removeClass("bg_color");
+                var inx = $(this).index();
+                console.log(inx);
+                 var imgs = $(".tab_content > li").eq(inx);
+                 imgs.addClass("show");
+                 imgs.siblings().removeClass("show")
+           })
+        })
+    </script>
+    <div class="cantainer">
+        <ul class="tab">
+            <li class="bg_color">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <ul class="tab_content">
+            <li class="show">
+                <img src="image/101.jpg" alt="">
+            </li>
+            <li>
+                <img src="image/102.jpg" alt="">
+            </li>
+            <li>
+                <img src="image/103.jpg" alt="">
+            </li>
+            <li>
+                <img src="image/104.jpg" alt="">
+            </li>
+        </ul>
+
+    </div>
+</body>
+</html>

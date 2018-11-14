@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>attr</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+            //设置  attr
+            //attr("name","index")
+            //removeAttr("name")
+            //获取 属性 prop removeProp
+            //注意点  prop 和attr 的区别 如果属性值为true或者false时用prop(checked selected disabled)  如果为不是布尔值用attr 
+            // console.log($("input").prop("checked"));
+            // console.log($("input").attr("checked"));
+            // $("input").click(function(){
+            //     console.log($("input").prop("checked"));
+            //     console.log($("input").attr("checked"));
+            // })
+            var btn = document.getElementsByTagName("button")[0];
+            console.log(btn);
+            btn.onclick = function(){
+                console.log("12")
+                var int = document.getElementsByTagName("input")[1];
+                console.log(int)
+                var text = int.value;
+                // console.log(int.value)
+                $("img").attr("src",text);
+
+
+            }
+  
+
+        })
+    </script>
+    <input type="checkbox">
+    <input type="text"> 
+    <button>换图</button>
+    <br>
+    <img src="https://fanyi.bdstatic.com/static/translation/img/header/logo_cbfea26.png" alt="">
+</body>
+</html>

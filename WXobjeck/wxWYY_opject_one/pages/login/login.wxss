@@ -1,0 +1,43 @@
+/* pages/login/login.wxss */
+.containers{
+  width: 100%;
+  height: 667px;
+  display: flex;
+  /* justify-content: center; */
+  position: relative;
+}
+.bgImg{
+  width: 100%;
+  height: 100%;
+}
+.fromgroup{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -200rpx;
+  }
+  input{
+    background-color:rgba(255, 255, 255,.3);
+    width: 400rpx;
+    height: 50rpx;
+    font-size: 14px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    /* padding: 0 20px; */
+
+  }
+  .btnGroup{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  button{
+      display: inline-block;
+      width: 45%;
+      height: 36px;
+      line-height: 36px;
+      color: #fff;
+      background: #87c6ff;
+      font-size:14px;
+
+  }

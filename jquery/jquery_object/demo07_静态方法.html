@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        // trim()去字符串两端的空格 返回值 去除空格后的字符串
+        var str = "   你好啊   ";
+        var strs = $.trim(str);
+        console.log("___" + strs + "___") 
+        // $.isWindow() 判断对象是否为window对象 返回值 true false
+        // $.isArray()  判断对象是否为真数组 返回值 true false
+        // $.isFunction()判断对象是否为函数 返回值 true false
+        // $.isObject()判断对象是否为函数 返回值 true false
+        // $.holdReady(true) 暂停ready事件 true 暂停 false 恢复
+        $.holdReady(true);
+        $(function(){
+            alert("你好呀");
+        })
+
+ 
+    </script>
+    <div id="btn">
+        clickme
+    </div>
+    <div class="clear">
+        clear
+    </div>
+    <script>
+        var i=null;
+            $("#btn").click(function(){
+           i = setInterval(function(){
+                $.holdReady(false);
+                console.log(123);
+            },1000)
+     
+        })
+        $(".clear").click(function(){
+            console.log(i)
+            clearInterval(i)
+        })
+        // hemin.cn/jq/index.html
+    </script>
+</body>
+</html>

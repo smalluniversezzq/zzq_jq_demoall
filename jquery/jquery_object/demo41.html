@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .ul,li{
+            list-style: none;
+        }
+        img{
+            width: 100%;
+        }
+        .swiper_container{
+            margin: 0 auto;
+            width: 200px;
+            overflow: hidden;
+        }
+        .swiper_box{
+            width: 400px;
+            overflow: hidden;
+        }
+        .swiper_box_list{
+            width: 200px;
+        }
+        .dis_flex{
+            display: flex;
+        }
+        .lt{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper_container">
+        <ul class="swiper_box">
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            let imgs = [
+            "image/1.jpg",
+            "image/2.jpg",
+            "image/3.jpg",
+            "image/4.jpg",
+            "image/1.jpg",
+            ]
+            var times;
+            var img_width = 200; 
+            var num = 0;
+            var nums = -200 * imgs.length;
+            var animateTime = 500;
+            var setTime = 3000;
+            //设置li
+            // "+ i +" 
+            var html
+            for(var i = 0 ; i<imgs.length;i++){
+                html = "<li> <img class='swiper_box_list lt' src= " + imgs[i] + " alt=''></li>" ;
+                $(".swiper_box").append(html);
+            }
+            //设置weiper_box的宽度
+            var swiper_width 
+            swiper_width = img_width * imgs.length;
+            $(".swiper_box").css({
+                width: swiper_width + "px"
+            })
+           setInterval(function(){
+                num -= 200
+                $(".swiper_box").animate({
+                    marginLeft : num + "px"
+                },animateTime)
+                if(num == (nums + 200)){
+                    $(".swiper_box").css({
+                        marginLeft : "0px"
+                    })
+                    num = 200 ;
+                    animateTime = 0;
+                    setTime = 500;
+                }else{
+                    animateTime = 500;
+                    setTime = 3000;
+                }
+                console.log(setTime,animateTime)
+            },setTime)
+        })
+    </script>
+</body>
+</html>

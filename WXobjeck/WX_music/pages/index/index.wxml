@@ -1,0 +1,105 @@
+<!-- 导航条 -->
+<view class='navbar'>
+  <view wx:for="{{navList}}" wx:key="{{index}}" class="item {{checkIndex==index?'active':''}}" data-index="{{index}}" bindtap='changeNavIndex'>{{item}}</view>
+</view>
+<!-- 推荐页 -->
+<view hidden='{{checkIndex!=0}}'>
+  <!-- 推荐页广告图 -->
+  <swiper indicator-dots indicator-color="rgba(255,255,255,0.8)" indicator-active-color="#31c27c" autoplay interval="5000" duration="1000" circular>
+    <block wx:for="{{slider}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item.picUrl}}" class="slide-image" data-index="{{index}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 电台 -->
+  <view>
+    <view class='recommend'>
+      <view class='recommend-title'>电台</view>
+      <view class='recommend-content '>
+        <view wx:for="{{radioList}}" wx:key="{{index}}" class='radio-box bg-white'>
+          <image src='{{item.picUrl}}' class="radio-img"></image>
+          <text class='radio-text'>{{item.Ftitle}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 热门歌单 -->
+  <view>
+    <view class='recommend'>
+      <view class='recommend-title'>热门歌单</view>
+      <view class='recommend-content'></view>
+    </view>
+  </view>
+</view>
+<!-- 排行榜页 -->
+<view hidden='{{checkIndex!=1}}'>
+  <view class='topList-box'>
+    <view class='topList-list' bindtap='toTopList' data-id="{{item.id}}" wx:for="{{topList}}" wx:key="{{index}}">
+      <view class='topList-imgbox'>
+        <image class="topList-img" src='{{item.picUrl}}'></image>
+        <view class='topList-playnum'>
+          <text class='playnum-img'></text>{{item.listenCount}}</view>
+      </view>
+
+      <view class='topList-info'>
+        <view class='topList-title'>{{item.topTitle}}</view>
+        <view class='topList-detail' wx:for="{{item.songList}}" wx:key="{{indedx}}">{{index+1}}
+          <text class='topList-songname'>{{item.songname}}</text> - {{item.singername}}</view>
+
+      </view>
+      <text class='topList-arrow'></text>
+    </view>
+  </view>
+</view>
+<!-- 搜索页 -->
+<view hidden='{{checkIndex!=2}}' class='bg-white search-page'>
+  <view class='search bg-grey'>
+    <view class='search-box'>
+      <icon size='14' type='search'></icon>
+      <input type='text' class='search-input' bindfocus='onFocus' value='{{keyword}}' bindinput='onInput' bindconfirm='onSearch' placeholder='搜索歌曲、歌单、专辑'></input>
+      <icon size='20' bindtap='clearInput' type='clear' hidden='{{searchWordLength<1}}'></icon>
+    </view>
+    <view class='cancel' bindtap='cancelInput' hidden='{{showCancel}}'>取消</view>
+  </view>
+
+
+
+  <!-- 输入历史 -->
+  <view class='search-history' hidden='{{showHistory}}'>
+    <view>
+      <view class='his-box' wx:for="{{searchHisWord}}" wx:key="{{index}}">
+        <icon type='waiting_circle' size='20' color='#D7D7D7'></icon>
+        <view class='his-word' bindtap='tapSearch' data-text="{{item}}">{{item}}</view>
+        <icon type='clear' bindtap='clearHisOne' data-index="{{index}}" size='15' color='#D7D7D7'></icon>
+      </view>
+      <view class='t-center t-main clear-history' hidden='{{searchHisWord.length==0}}' bindtap='clearHisAll'>清除搜索记录</view>
+    </view>
+  </view>
+  <!--热门搜索  -->
+  <view class='hot-search' hidden='{{showHotSearch}}'>
+    <view class='hot-search-title'>热门搜索</view>
+    <view>
+      <view class='hot-search-word special' data-text="{{hotSearch.special_key}}" hidden='{{!hotSearch.special_key}}' data-url="{{hotSearch.special_url}}" bindtap='outUrl'>{{hotSearch.special_key}}
+
+      </view>
+      <view class='hot-search-word' wx:for="{{hotSearch.hotkey}}" wx:key="{{index}}" bindtap='tapSearch' data-text="{{item.k}}">{{item.k}}</view>
+    </view>
+  </view>
+
+  <!-- 搜索结果 -->
+  <view class='search-res bg-white' hidden='{{showSearchRes}}'>
+    <scroll-view scroll-y>
+      <view class='res_list' wx:for="{{contentlist}}" wx:key="{{index}}">
+        <view class='res_img_box'>
+          <view class='res_img'></view>
+        </view>
+        <view class='res_info' bindtap='goPlay' data-mid="{{item.songmid}}" data-index="{{index}}">
+          <view class='res_songname'>{{item.songname}}</view>
+          <view class='res_singname'>{{item.singername}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+</view>

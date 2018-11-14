@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.container{
+    width: 320px;
+    height: 480px;
+    background: url("img/game_bg.jpg") no-repeat 0 0;
+    margin: 50px auto;
+    position: relative;
+}
+.container > h1{
+    color: white;
+    margin-left: 60px;
+}
+.container > .progerss{
+    width: 180px;
+    height: 17px;
+    background: red;
+    border-radius: 10px;
+    position: absolute;
+    top: 65px;
+    left: 62px;
+}
+.container > .start {
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(#e55c3d,#c50000);
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    margin-left: -75px;
+}
+.reus{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15px;
+    background: #444444;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 15px;
+}
+.reiu{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding-top:100px;
+    text-align: center; 
+    display: none;
+    z-index: 100;
+}
+.reiu>p{
+    line-height: 50px;
+    color: #fff;
+}
+.reiu > a{
+    color: red;
+}
+.container > .msk{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding-top:100px;
+    text-align: center; 
+    display: none;
+}
+.msk > h1{
+    color: #ff4500;
+    text-shadow: 3px 3px 0 #fff;
+    font-size: 40px;
+}
+.msk >.cxkx{
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(#e55c3d,#c50000);
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    margin-left: -75px;
+}

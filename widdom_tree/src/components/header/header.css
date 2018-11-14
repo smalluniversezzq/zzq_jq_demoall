@@ -1,0 +1,19 @@
+@import '../../containers/styles/index.css';
+.header{
+    background: #ffffff;
+}
+.container{
+    width: 100%;
+    height: 50px;
+}
+.headcontainer{
+    width: 100%;
+    position: fixed;
+    font-size: 18px;
+    border-bottom:1px solid #bebebe;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    top: 0;;
+    background: #ffffff;
+}

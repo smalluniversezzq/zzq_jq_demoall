@@ -1,0 +1,32 @@
+<view class="containers">
+<!-- 头像 -->
+  <view class="portaitCon">
+      <image src="{{userbg}}" mode="widthFix" mode="widthFix" class="portaitBg"></image>
+      <view class="portaitGroup">
+        <view class="username_box">
+           <!-- <image src="{{userhead}}"></image>  -->
+           <open-data type="userAvatarUrl"></open-data>
+
+        </view>
+        <open-data class="username" type="userNickName"></open-data>
+        <!-- <view class="username">{{username}}</view> -->
+      </view>
+  </view>
+  <!-- 用户设置 -->
+  <view class="settingCon">
+      <view class="settingItem dis_flex">
+        <view class="weather_text">{{weather}}</view>
+        <switch bindchange="switchchange" class="switcher" type="switch" color="#87c6ff"></switch>
+      </view>
+       <view class="settingItem dis_flex">
+       <view class="weather_text">撰写攻略</view>  <image class="gonglue_img switcher" src="/images/ort.png" bindtap="toBolg"></image>
+       </view>
+      <view class="settingItem dis_flex">
+          <view class="weather_text">更多信息 
+           <icon type="info" size="20" color="#87c6ff"></icon>
+          </view>
+         
+      </view>
+    
+  </view>
+</view>

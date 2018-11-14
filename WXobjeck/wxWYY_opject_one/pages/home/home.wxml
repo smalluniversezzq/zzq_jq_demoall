@@ -1,0 +1,23 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{true}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="{{true}}" indicator-active-color="#ffffff">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="list-view">
+  <view wx:for="{{icons}}" class="item-box">
+    <view class="image_box">
+      <image class="list-view-image" src="{{item.imgsUrl}}"></image>
+    </view>
+    <view class="list-item-name">{{item.name}}</view>
+  </view>
+</view>
+<view class="artocle">
+  <view class="artocle-itew" wx:for="{{article}}" wx:for-item="itemName">
+    <navigator url="{{itemName.link}}" open-type="navigate">
+      <image class="attoclePic" src="{{itemName.picUrl}}" mode='widthFix'></image>
+      <view class="artocleTitle">{{itemName.title}}</view>
+    </navigator>
+  </view>
+</view>

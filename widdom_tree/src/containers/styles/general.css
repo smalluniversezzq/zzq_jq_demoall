@@ -1,0 +1,190 @@
+body * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+  body, button, input, select, textarea { font:12px/1.5 tahoma, arial, \5b8b\4f53; }
+  body { font-family: PingHei, "Helvetica Neue", Helvetica, Arial, "Lantinghei SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, STHeiti, "WenQuanYi Micro Hei", SimSun, sans-serif; }
+  h1, h2, h3, h4, h5, h6{ font-size:100%; }
+  address, cite, dfn, em, var { font-style:normal; }
+  code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+  small{ font-size:12px; }
+  ul, ol { list-style:none; }
+  a { text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  sup { vertical-align:text-top; }
+  sub{ vertical-align:text-bottom; }
+  legend { color:#000; }
+  fieldset, img { border:0; }
+  button, input, select, textarea { font-size:100%; }
+  table { border-collapse:collapse; border-spacing:0; }
+  input, textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    outline: none;
+    -webkit-appearance:none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  input.password {
+    -webkit-text-security: disc;
+    text-security: disc;
+  }
+  
+  p.bottomTipText {
+    bottom: 2%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: #999999;
+    font-size: 12px;
+  }
+  
+  .defaultButton {
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgba(65, 174, 250, 1);
+    border-radius: 5px;
+    text-align: center;
+    &.disabled {
+      background-color: rgba(221, 221, 221, 1);
+      color: #cccccc;
+    }
+  }
+  
+  .disSelectable {
+  }
+  
+  
+  .borderTop, .borderBottom, .borderRight, .borderLeft {
+    position: relative;
+  }
+  
+  .borderTop:before {
+    content: "";
+    border-top: 1px solid #dddddd;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    width: 200%;
+    height: 200%;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .borderBottom:after {
+    content: "";
+    border-bottom: 1px solid #dddddd;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    width: 200%;
+    height: 200%;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .borderRight:after {
+    content: "";
+    border-right: 1px solid #dddddd;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .borderAround {
+    position: relative;
+  }
+  
+  .borderAround:before {
+    content: "";
+    border: 1px solid #dddddd;
+    border-radius: 40px;
+    top: 0;
+    height: 200%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 200%;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .banklogo {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    background: no-repeat center center;
+    background-size: 100%;
+    margin-right: 10px;
+  }
+  .appLink {
+    color: #41aefa;
+  }
+  .position_re{
+    position: relative
+  }
+  .position_ab{
+    position: absolute;
+  }
+  .dis_flex{
+    display: flex;
+  }
+
+  

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var reg = new RegExp("e");
+        var text = "naxinshigeshaxiong shibenxiong shishanpao";
+        var nulltext = "naxin shi yi tou xiong"
+        //test
+        console.log(reg.test(text)); //true
+        console.log(reg.test(nulltext)); //false
+        //exec
+        console.log(reg.exec(text)); //["e", index: 9, input: "naxinshigeshaxiong shibenxiong shishanpao", groups: undefined]
+        console.log(reg.exec(nulltext)); //null
+    
+    </script>
+</body>
+</html>

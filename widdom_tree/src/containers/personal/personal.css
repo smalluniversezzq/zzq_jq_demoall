@@ -1,0 +1,196 @@
+@import '../styles/index.css';
+.header_holder{
+    height: 45px;
+    background:45px;
+    opacity: 0;
+}
+
+.pos_r{
+    position: relative;
+}
+.pos_a{
+    position: absolute;
+}
+.personl{
+    background: #f5f5f5;
+}
+.per_container{
+    height: 140px;
+    background: url("./image/growupbg.jpg") no-repeat;
+    background-size: 100%;
+}
+.per_container_logo{
+    margin-top: 12px;
+    width: 15px;
+    height: 15px;
+    background: url("./image/frt.png") no-repeat;
+    background-size: 15px;
+    right: 20px;
+    }
+.per_ruyuan{
+    background: #ffffff;
+    margin-top:10px; 
+    height: 45px;
+}
+.per_ruyuan_box{
+    margin: 0 20px;
+}
+.dis_flex{
+    display: flex;
+}
+
+.per_ruyuan_box >P{
+    margin: 0 0 0 12px;
+    line-height: 45px;
+    font-size: 12px;
+}
+.per_right_logo{
+    margin-top: 12px;
+    width: 15px;
+    height: 15px;
+    background: url("./image/ort.png") no-repeat;
+    background-size: 15px;
+    right: 20px;
+}
+
+.pre_vip{
+    background: #ffffff;
+    margin-top:10px; 
+    height: 135px;
+}
+.pre_vip_box{
+    margin: 0 20px;
+}
+.per_list_bottom{
+    border-bottom: 1px solid #f5f5f5;
+}
+.pre_quanzi{
+    background: #ffffff;
+    margin-top:10px; 
+    height: 225px;
+}
+.pre_yingjian{
+    background: #ffffff;
+    margin-top:10px; 
+    height: 90px;
+}
+.logo{
+    margin-top: 12px;
+    width: 20px;
+    height: 20px;
+}
+.per_container{
+    padding-top:1px; 
+}
+.per_cont_info{
+    margin:50px 0 0 30px;
+}
+.cont_port{
+    width: 60px;
+    height: 60px;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.cont_port>img{
+    width: 60px;
+}
+.user_name{
+    color: #ffffff;
+    font-size: 18px;
+}
+.user_aotu{
+    color: #ffffff;
+    font-size:12px;
+}
+.user_info{
+    margin:10px 0 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.per_left_logo_1{
+    background: url("./image/tree1.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_2{
+    background: url("./image/tree2.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_3{
+    background: url("./image/tree3.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_4{
+    background: url("./image/tree4.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_5{
+    background: url("./image/tree5.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_6{
+    background: url("./image/tree6.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_7{
+    background: url("./image/tree7.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_8{
+    background: url("./image/tree8.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_9{
+    background: url("./image/tree9.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_10{
+    background: url("./image/tree10.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_11{
+    background: url("./image/tree11.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_12{
+    background: url("./image/tree12.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_13{
+    background: url("./image/tree13.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_14{
+    background: url("./image/tree14.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_15{
+    background: url("./image/tree15.png") no-repeat;
+    background-size: 20px;
+}
+.per_left_logo_16{
+    background: url("./image/tree16.png") no-repeat;
+    background-size: 20px;
+}
+.zhuaiwei{
+    height: 45px;
+    background: #ffffff;
+    opacity:0;
+}
+
+
+

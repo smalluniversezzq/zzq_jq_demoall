@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 300px;
+            margin: 100px auto 0;
+        }
+
+        .nav {
+            width: 300px;
+            height: 50px;
+            display: flex;
+        }
+
+        .nav>li {
+            list-style: none;
+            width: 33%;
+            background: #00aaee;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .nav_child {
+            display: none;
+        }
+        .nav_child>li {
+            width: 99px;
+            height: 50px;
+            background: #eeeccc;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        $(function () {
+            $(".nav>li").mouseenter(function(){
+                var nav_child = $(this).children(".nav_child");
+                nav_child.stop()
+                // var sibling_child = $(this).siblings().children(".nav_child");
+                nav_child.slideDown(1000);
+                // sibling_child.slideUp(1000);
+            })
+            $(".nav>li").mouseleave(function(){
+                var nav_child = $(this).children(".nav_child");
+                nav_child.stop()
+                nav_child.slideUp(1000);
+            })
+
+       })
+
+    </script>
+    <div class="container">
+        <ul class="nav">
+            <li>
+                <span>一级菜单</span>
+                <ul class="nav_child">
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                </ul>
+            </li>
+            <li>
+                <span>一级菜单</span>
+                <ul class="nav_child">
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                </ul>
+            </li>
+            <li>
+                <span>一级菜单</span>
+                <ul class="nav_child">
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                    <li>二级菜单</li>
+                </ul>
+
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

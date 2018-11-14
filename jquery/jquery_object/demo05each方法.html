@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        // js forEach只能便利数组  不能便利数组对象
+        // var arr=[1,2,3,4,6,7,8]
+        // arr.forEach(function(val,inx){
+        //     console.log(val,"___",inx)
+        // })
+        
+
+
+
+        //PS jq each 方法可以便利伪数组 第一个参数是下标 - 值
+        var obj={"sda":"dada","dasd":"dasd"};
+        $.each(obj,function(val,inx){
+            console.log(val,"____",inx);
+        })
+        </script>
+    
+</body>
+</html>

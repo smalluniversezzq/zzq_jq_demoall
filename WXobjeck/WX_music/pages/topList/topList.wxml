@@ -1,0 +1,46 @@
+<!--pages/topList/topList.wxml-->
+<view class='info_box'>
+  <view class='info_box__bd'>
+    <view class='top_bar'>
+      <image class='top_bar__img' src='https://y.gtimg.cn/mediastyle/mod/mobile/img/logo.svg?max_age=2592000'></image>
+      <text>QQ音乐</text>
+    </view>
+    <view class='album'>
+      <view class='album__media'>
+        <image class='album__cover' src='{{linkUrl}}'></image>
+      </view>
+      <view class='album__bd'>
+        <view class='album__name'>{{topinfo.ListName}}</view>
+        <view class='album__desc'>{{day}}</view>
+        <view class='album__desc'>{{date}}</view>
+
+      </view>
+
+    </view>
+    <view class='opt_box'>
+      <text class='btn_play_all' data-index="{{playAllIndex}}"  bindtap='playMusic'>播放全部</text>
+      <view class='play_bar'></view>
+
+    </view>
+  </view>
+  <image class='info_box__bg' src='{{linkUrl}}'></image>
+</view>
+<!-- 歌曲列表 -->
+<view class='title'>排行榜 共{{songlist.length}}首</view>
+<view>
+  <view class='songList' data-id="{{item.data.songid}}" data-index="{{index}}" data-type="{{item.data.songtype}}" data-mid="{{item.data.songmid}}" wx:for="{{songlist}}" wx:key="{{index}}" bindtap='playMusic'>
+    <view class='songListIndex {{index>2?"":"hot"}}'>{{index+1}}</view>
+    <view class='song_box'>
+      <view class='songname'>{{item.data.songname}}</view>
+      <view class='song_info'>
+        <text class='vip' wx:if="{{item.data.pay.payplay==1}}">VIP</text>
+        <text wx:for="{{item.data.singer}}" wx:key="{{index}}">
+       <text wx:if="{{index>0}}">/</text>
+        <text>{{item.name}}  </text>
+        </text>
+        <text class='alubmdesc' decode="{{true}}"> &nbsp;&nbsp;{{item.data.albumdesc
+}}</text>
+      </view>
+    </view>
+  </view>
+</view>

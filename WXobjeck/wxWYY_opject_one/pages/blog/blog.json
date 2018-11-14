@@ -1,0 +1,10 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"llight",
+    "navigationBarTitleText": "个人中心",
+    "navigetionBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+            function toThousands(num) {
+                var result = [ ], counter = 0;
+                num = (num || 0).toString().split('');
+                for (var i = num.length - 1; i >= 0; i--) {
+                    counter++;
+                    result.unshift(num[i]);
+                    if (!(counter % 3) && i != 0) { result.unshift(','); }
+                    }
+                    return result.join('');
+                    }
+                   console.log( toThousands(363373863.66))
+                   function toThousandss(num){
+                        var result = '', counter = 0;
+                        console.log( num.length - 1)
+                        num = (num || 0).toString();
+                        for (var i = num.length - 1; i >= 0; i--) {
+                            counter++;
+                            result = num.charAt(i) + result;
+                            if (!(counter % 3) && i != 0) { result = ',' + result; }
+                            }
+                        return result;
+                        }
+                        console.log(toThousandss(363373863.66),"22")
+                        var str = "363,373,863,.66";
+                        var reg = new RegExp("$0 -> ,");
+                        var a = str.replace(reg,"x");
+                        console.log(a,"a");
+                    })
+    </script>
+</body>
+</html>

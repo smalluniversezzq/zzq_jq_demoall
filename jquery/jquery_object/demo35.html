@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+    <style>
+        * {
+            border: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #00aaee;
+            box-sizing: border-box;
+            border: 1px solid #000;
+        }
+
+        .btn {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        $(function () {
+            $(".btnadd").click(function () {
+                var containers = $(".container");
+                var $box = $("<div class=\"box\"></div>\n" +
+                    "<div class=\"box\"></div>\n"
+                )
+                containers.append($box)
+            })
+            $(".btnremove").click(function () {
+                var containers = $(".container");
+                var conbox = $(".container").children(".box");
+                console.log(conbox);
+                conbox.remove();
+            })
+        })
+    </script>
+     <button class="btnadd">增加</button>
+     <button class="btnremove">删除</button>
+    <div class="container">
+    </div>
+   
+</body>
+</html>
