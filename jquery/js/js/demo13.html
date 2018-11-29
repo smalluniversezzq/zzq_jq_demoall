@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则表达式</title>
+</head>
+<body>
+    <script>
+        // 语法  直接量语法/pattern/attributes   创建对象语法 new RegExp(pattern, attributes);
+        // 参数 pattern 是一个字符串，指定了正则表达式的模式或其他正则表达式。
+        // 参数 attributes 是一个可选的字符串，包含属性 "g"、"i" 和 "m"，
+        // 分别用于指定全局匹配、区分大小写的匹配和多行匹配。ECMAScript 标准化之前，不支持 m 属性。
+        // 如果 pattern 是正则表达式，而不是字符串，则必须省略该参数。
+        // i	执行对大小写不敏感的匹配。
+        // g	执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。
+        // m	执行多行匹配。
+        var strs = "410182199201220753";
+        var regexps = new RegExp("^(\d{6})(\d{4})(\d{2})(\d{2})(\d{3})([0-9]|X)$");
+        var ppjg = regexps.test(strs);
+        console.log(ppjg);
+    </script>
+
+</body>
+</html>

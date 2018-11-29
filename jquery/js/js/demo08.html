@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        // var jsons = '{"empl":[' +
+        // '{"fname":"zhu","age":"15"},'+
+        // '{"gname":"li","age":"13"}'+
+        // '{"dname":"zhang","age":"12"}]}';
+        // objs = JSON.parse(jsons);
+        // console.log(objs)
+        var objects = {names:"mk",age:"",color:"asd"};
+        var jsons = JSON.stringify(objects);
+        console.log(jsons,"json字符串");
+        var nodes = JSON.parse(jsons);
+        console.log(nodes);
+        
+    </script>
+</body>
+</html>

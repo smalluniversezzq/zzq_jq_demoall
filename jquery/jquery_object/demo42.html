@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        (function(window,undefined){
+            var njQuery =function(select){
+                return new njQuery.prototype.init(selector);
+            }
+            njQuery.prototype = {
+                constructor:njQuery,
+                init:function(selector){
+                    if(!selector){
+                        return this
+                    }
+                    // 字符串
+                    else if(typeof selector === "string"){
+                        //是否是代码片段
+                        if(selector.charAt(0) =="<" && selector.charAt(selector.length-1) == ">" && selector.length >=1){
+                            //根据代码片段穿件所有元素
+                            //
+                            var temp = document.createElement("<div>");
+                            temp.innerHTML = selector; 
+                            
+                        }
+                    }
+                }
+            }
+        })(window)
+    </script>
+</body>
+</html>

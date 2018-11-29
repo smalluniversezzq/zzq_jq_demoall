@@ -13,7 +13,7 @@
                   </div>
               </div>
               <div class="title_right rt ">
-                  <span>登录</span>
+                  <span @click="login()">登录</span>
                   <span>注册</span>
                   <span>帮助中心</span>
               </div>
@@ -27,7 +27,24 @@ export default {
   data () {
     return {
     }
+
+  },
+  create(){},
+  mounted(){
+    
+  },
+  methods:{
+    login(){
+      this.$router.push({
+        path:"login",
+        query:{
+          id:"zzq",
+          name:"zhuzhiqiang"
+        }
+      })
+    }
   }
+
 }
 </script>
 

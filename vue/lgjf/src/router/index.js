@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import home from '../conponents/home.vue';
 import login from '../conponents/login.vue';
+import parent from '../conponents/parent.vue';
 // import header from '../conponents/subcpnent/header.vue';
 
 Vue.use(Router)
@@ -19,6 +20,11 @@ export default new Router({
             name: 'login',
             component: login
         },
+        {
+            path: '/parent',
+            name: 'parent',
+            component: parent
+        }
         // {
         //     path: '/header',
         //     name: 'header',

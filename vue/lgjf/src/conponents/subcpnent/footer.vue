@@ -25,7 +25,7 @@
             </div>
             <div class="inline lt"></div>
             <div class="nav lt ">
-              <ul class="nan_list  ">
+              <ul class="nan_list">
                 <li>关于我们</li>
                 <li>安全保障</li>
                 <li>新手指引</li>

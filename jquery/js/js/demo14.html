@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // concat() 链接两个或多个字符串，返回链接后的字符串         
+        // split() 把字符串切割成字符串数组
+        // charAt()  指定索引位置的字符
+        // replace() 替换正则匹配的字符串
+        // slice() 提取字符串片段 在新的字符串中返回被提取的结果   方法可从已有的数组中返回选定的元素。
+        // substr() 方法可在字符串中抽取从 start 下标开始的指定数目的字符。
+        // substring()提取字符串中两个指定的索引号之间的字符
+        // toString() 方法可把一个逻辑值转换为字符串，并返回结果。 返回字符串的对象值  
+        // trim() 移除字符串首 尾的空白
+        // match()  找到一个或多个正则匹配的值
+        // exec()  demo6
+        // search() 检索正则匹配的值
+        // valueOf() 返回某个字符串对象的原始值
+        // indexOf() 
+        var w_ll_j = ["xiaohoudun"]
+        var s_ll_j = [""];
+        var d_ll_j = [""];
+        var z_ll_j = ["menghuo"];
+        var strz = "zhu", strzz ="zhi" , strq = "qiang",trims = " ll ";
+        var zzq = strz.concat(strzz,strq);
+        console.log(zzq); // "zhuzhiqiang"
+        var zzqs = zzq.split(""); //["z","h","u",....]
+        console.log(zzqs);
+        console.log(zzq.charAt(1)); //h
+        var regexp = "q" ;
+        console.log(zzq.replace(regexp,9)); //zzqzhi9iang
+        //slice  从下标3 - 6之间提取字符串
+        console.log(zzq.slice(3,6),"slice") ;  //zhi
+        //substr() 从下标2开始 往后5个 的字符串；
+        console.log(zzq.substr(2,5))  // uzhiq
+        //substring() 提取 从下标开始处 到下标结束处之间的字符串 
+        console.log(zzq.substring(3,6),"substring"); // zhi
+        console.log(zzq.toString(),"tostring"); 
+        //trim  
+        console.log("__"+trims+"__","__"+trims.trim()+"__","trim"); //__ ll __ __ll__ trim
+        //match  返回数组
+        var exp = "z";
+        console.log(zzq.match("z"));  //["z", index: 0, input: "zhuzhiqiang", groups: undefined]   
+        
+         
+
+
+
+        
+    </script>
+</body>
+</html>

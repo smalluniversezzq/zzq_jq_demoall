@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width,user-scalable=no" /> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>诚邀加盟</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 0px;
+            font-family: "微软雅黑";
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        img {
+            width: 100%;
+            max-width: 100%;
+            display: block
+        }
+        
+        .img-box {
+            position: relative;
+            width:100%;
+        }
+        
+        .img-common {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 9.307rem;
+        }
+        
+        .img1 {
+            top: 11.143rem;
+        }
+        
+        .img2 {
+            top: 17.262rem;
+        }
+        
+        .img3 {
+            bottom: 10.104rem;
+        }
+        
+        .img4 {
+            bottom: 4.565rem;
+        }
+        
+        .btn {
+            top: 23.057rem;
+            max-width: 8.564rem;
+            z-index: 999;
+        }
+        
+        .form {
+            height: 7.5324rem;
+            padding: 1.336rem 0.742rem 0;
+        }
+        
+        label {
+            font-size: 0.306rem;
+            width: 2.096rem;
+            display: inline-block;
+            color: #000;
+            letter-spacing: 0.053rem;
+        }
+        
+        .company {
+            height: 0.85rem;
+            line-height: 0.850rem;
+        }
+        
+        .name {
+            height: 1.118rem;
+            line-height: 1.118rem;
+        }
+        
+        .tel {
+            height: 1.014rem;
+            line-height: 1.014rem;
+        }
+        
+        .remarks {
+            height: 0.885rem;
+            line-height: 0.885rem;
+        }
+        
+        input {
+            border: 0;
+            background-color: #f4f3ff;
+        }
+        
+        .warn {
+            color: red;
+        }
+    </style>
+    <script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/flexible_css.debug.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="img-box">
+        <img src="./img/WechatIMG230.png" alt="">
+        <div>
+            <img src="./img/liucheng.png" class="img-common  img1" alt="">
+            <div>
+                <img src="./img/info.png" class="img-common img2">
+                <img src="./img/btn.jpg" alt="" class="img-common  btn">
+                <div class="img-common img2 form">
+                    <div class="company"><label><span class="warn">*</span> 公司名称:</label><input name="company" id="company" type="text"></div>
+                    <div class="name"><label><span class="warn">*</span> 真实姓名:</label><input name="realName" id="realName" type="text"></div>
+                    <div class="tel"><label><span class="warn">*</span> 联系方式:</label><input name="tel" id="tel" type="text"></div>
+                    <div class="remarks"><label><span>&nbsp;</span> 备注:</label><input name="remarks" id="remarks" type="text"></div>
+                </div>
+            </div>
+            <img src="./img/youshi.png" class="img-common img3" alt="">
+            <img src="./img/biaozhun.png" class="img-common img4" alt="">
+        </div>
+    </div>
+    <script type="text/javascript" src="js/require.min.js" data-main="js/index.js"></script>
+</body>
+
+</html>

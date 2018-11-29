@@ -11,7 +11,7 @@
     <button onclick="">123</button>
 
     <script>
-        // web 技术栈 vue es6 理解http协议 调试 性能优化 web安全  工程化   小程序      Highcharts   Echarts 
+        // web 技术栈 vue es6 理解http协议 调试 性能优化 web安全  工程化   小程序 Highcharts   Echarts 
         // 移动开发经验  第三方登录授权 本地存储 缓存处理 
         // vue 组件通信 vue指令 生命周期 计算属性 
 
@@ -19,19 +19,20 @@
         // 数据类型 ：数字Number 字符串String 布尔Boolean 数组Array 对象Object 空null 未定义 Undefined ？？javascript 字符集 Unicode
         // break 跳出循环 catch 语句块  continue 跳出循环中的一个迭代
         // do...while 执行一个语句块，在条件语句为true时继续执行该语句块
-        // 字符串方法 掌握  
+        // 字符串方法 掌握                          demo12
         // concat() 链接两个或多个字符串，返回链接后的字符串         
         // split() 把字符串切割成字符串数组
         // charAt()  指定索引位置的字符
         // replace() 替换正则匹配的字符串
-        // slice() 提取字符串片段在新的字符串中返回被提取的结果
-        // substr() 从起始索引提取字符串中指定数目的字符
+        // slice() 提取字符串片段 在新的字符串中返回被提取的结果   方法可从已有的数组中返回选定的元素。
+        // substr() 方法可在字符串中抽取从 start 下标开始的指定数目的字符。
         // substring()提取字符串中两个指定的索引号之间的字符
-        // toString() 返回字符串的对象值
+        // toString() 方法可把一个逻辑值转换为字符串，并返回结果。 返回字符串的对象值  
         // trim() 移除字符串首 尾的空白
         // match()  找到一个或多个正则匹配的值
         // search() 检索正则匹配的值
         // valueOf() 返回某个字符串对象的原始值
+        // indexOf() 
         // **
         // toLowerCase() 字符串转小写
         // toUpperCase() 字符串转大写 
@@ -55,7 +56,7 @@
         // toFixed() 把数字转为字符串，结果的小数点后有指定位数的数字  toFixed(2) 保留小数点后两位
         // 布尔值转字符串
         //  **
-        // String(true) String(false) "true" "false" false.toString() true.toString() "true" "false"
+        // String(true)  String(false)   //"true" "false"   __  false.toString() true.toString() // "true" "false"
         // 日期转字符串
         // ***
         // getDate() 返回一个月中某一天
@@ -72,12 +73,20 @@
         // test() 检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回true 否则返回false   demo06
         // exec 检索字符串中的正则表达式的匹配 返回一个数组,其中存放匹配结果。如果未找到匹配,则返回null。 demo06
         // 错误 **
-        //  try throw 当错误发生时js引擎会停止，并生成一个错误信息 try 定义在执行时进行错误测试的代码块。 catch 当try代码发生错误时执行的代码块 try cstch是成对出现的 demo07
-        //  throw 允许自定义错误 术语：创建或抛出异常 （exception） throw与try 和 catch一起使用 能够控制程序流生成自定义错误信息 demo07栗子2
+        //  try throw 当错误发生时js引擎会停止，并生成一个错误信息 try 定义在执行时进行错误测试的代码块。 
+        // catch 当try代码发生错误时执行的代码块 try cstch是成对出现的 demo07
+        // 栗子2 throw 允许自定义错误 术语：创建或抛出异常 （exception） throw与try 和 catch一起使用 能够控制程序流生成自定义错误信息  demo07
         // 严格模式 
         // js使用误区 js是以64位浮点数存储的 var x = 0.1,y = 0.2,z = x + y ; if(z = 0.3) //false  z = 0.30000000000004
         // 解决 var z = (x*10 + y*10)/10   //   0.3
-
+        // js 的null和undefined null用于对象 undefiined用于变量,属性和方法 对象只有定义了才有可能为null 否则为undefined
+        // 测试是否为对象 if(typeOf obj !== undefined && obj !== null){}
+        // json  ***
+        // json转js对象 var obj = JSON.parse(text);  demo8
+        // js对象转json var jsons = JSON.styingify() ;
+        // void()  计算一个表达式但是不返回值 栗子 <a href="javascript:void(0)">不会发生任何事情</a> 
+        // 正则表达式  regexp()              demo13  
+        // 
         var txt = "asdfghjkqwerpoiuyzmxncbv";
         var txts = "lkjhgfdsa";
         var text = txt.concat(txts);
@@ -87,4 +96,4 @@
         console.log(sin);
     </script>
 </body>
-</html>
+</html> 

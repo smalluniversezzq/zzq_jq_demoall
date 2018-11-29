@@ -1,6 +1,6 @@
 <template>
   <div id="login">
-      <Hder></Hder>
+      <Head></Head>
       <Table></Table>
         <div class="logins">
           <div class="container">
@@ -33,7 +33,7 @@
                       </div>
                       <div class="int_text_box marbum">
                         <i class="int_logo int_user"></i>
-                        <input class="int_text" type="text" placeholder="用户名/邮箱/手机号">
+                        <input class="int_text" type="text" placeholder="用户名/邮箱/手机号" >
                       </div>
                       <div class="int_text_box marbum">
                         <i class="int_logo int_paddword"></i>
@@ -60,22 +60,29 @@
   </div>
 </template>
 <script>
-import Hder from "./subcpnent/header.vue";
+import Head from "./subcpnent/header.vue";
 import Table from "./subcpnent/tables.vue";
 import Alert from "./subcpnent/alert.vue";
 import Footer from "./subcpnent/footer.vue";
 export default {
   components: {
-    Hder,
+    Head,
     Table,
     Alert,
     Footer
   },
   data() {
-    return {};
+    return {
+      userId:""
+    };
   },
   created() {
     document.body.style.cssText = "background:#f5f5f5";
+  },
+  mounted(){
+    this.userId = this.$route.query.id;
+    // $(".int_text").val(this.userId);
+
   }
 };
 </script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+            var str = "   123   ";
+            var regexp = new RegExp(/^\s+|\s+$/g);
+            var regstr = str.replace(regexp,"");
+            var strs = str.trim();
+            if(str.trim()){
+                return str.trim()
+            }else{
+                return str.replace(/^\s+|\s+$/g,"")
+            }
+        })
+    </script>
+</body>
+</html>

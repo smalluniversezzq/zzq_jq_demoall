@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>嗨闪付</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 0px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            display: block
+        }
+
+        .img-box {
+            position: relative;
+        }
+
+        .hsf_bg {
+            position: relative;
+        }
+
+        .hsf_Con {
+            width: 9.4rem;
+            left: 50%;
+            margin-left: -4.7rem;
+            position: absolute;
+            top: 12rem;
+        }
+    </style>
+    <!-- 手机适配 -->
+    <script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/flexible_css.debug.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div class="hsf_bg">
+        <img src="img/hsf_bg.png" alt="">
+        <div class="hsf_Con">
+            <img src="img/hsf_1.png" alt="">
+            <img src="img/hsf_2.png" alt="">
+            <img src="img/hsf_3.png" alt="">
+        </div>
+    </div>
+    <script type="text/javascript" src="js/require.min.js" data-main="js/index.js"></script>
+</body>
+
+</html>
