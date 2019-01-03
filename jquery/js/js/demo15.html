@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let price = 5;
+        let quantity = 2;
+        let total = 0;
+        let target = null;
+        let storage = [];
+        function record(){
+            storage.push(target)
+        }
+        function replay (){
+            storage.forEach(run =>run())
+        }
+        target = ()=>{
+            total = price * quantity
+        }
+        record()
+        target()
+        price = 20
+        console.log(total);   //10
+        replay()
+        console.log(total);   //40
+        price = 40;
+        console.log(total);   //40
+        replay()
+        console.log(total);   //89
+    
+    </script>
+</body>
+</html>

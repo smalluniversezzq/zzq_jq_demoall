@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="login.js"></script>
+    <script src="cookie.js"></script>
+</head>
+<body>
+    <form id="form22" name="form22" action="checklogin.action" method="post" >
+        <div class="username" style="margin-top:50px;">
+         <label>用户名：</label>
+         <input type="text" name="username" id="userName" />
+         <span id="myuser" style="color: red; font-size:12px; font-weight: normal;"></span>
+        </div>
+        
+        <div class="password">
+         <label>密 码：</label>
+         <input name="password" id="passWord" type="password" />
+         <span id="mypass" style="color: red; font-size:12px; font-weight: normal;"></span>
+        </div>
+        
+        <div class="user_type" >
+         <label>  </label>
+         <input type="checkbox" id="saveUserName" style="float: left; margin-top:3px;" /> 
+         <span> 记住用户</span>  
+        </div>
+        
+        <input type="button" value="" class="btn_login" id="btn_login" onclick="checkform();"/>
+        
+       </form>
+</body>
+</html>

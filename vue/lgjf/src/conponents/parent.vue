@@ -25,7 +25,7 @@ export default {
     },
     methods:{
         childByValue: function (childByValue) {
-            console.log(childByValue,"childByValue")
+          console.log(childByValue,"childByValue")
         // childValues就是子组件传过来的值
         this.name = childByValue;
         }

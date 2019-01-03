@@ -31,8 +31,8 @@ export default {
   mounted() {
     window.onscroll = function() {
       var t = document.documentElement.scrollTop || document.body.scrollTop;
-      t>=40 ? $("#tables").addClass("addfloat") : ""
-      t<=40 ? $("#tables").removeClass("addfloat") : ""
+      t >= 40 ? $("#tables").addClass("addfloat") : ""
+      t <= 40 ? $("#tables").removeClass("addfloat") : ""
     //   if (t >= 40) {
     //       console.log("true")
     //      $("#tables").addClass("addfloat");

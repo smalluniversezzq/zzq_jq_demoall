@@ -104,7 +104,6 @@
                       </div>
                   </div>
               </div>
-
           </div>
       </div>
       <Footer></Footer>
@@ -222,7 +221,6 @@ export default {
       }
     }
   }
-  
 };
 </script>
 <style scoped>

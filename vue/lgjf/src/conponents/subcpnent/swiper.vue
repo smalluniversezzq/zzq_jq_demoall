@@ -52,7 +52,7 @@ export default {
       prevButton: '.swiper-button-prev',
       // 如果需要滚动条
       // scrollbar: '.swiper-scrollbar',
-      //设置初始显示index 0为第一张
+      //设置初始显示index 0为第 一张
       initialSlide : 0,
       //设置宽度
       width: 3000, 
