@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .container{
+            margin: 0 auto;
+        }
+        #btn{
+            width: 100px;
+            height: 30px;
+            border: 1px solid #00aaee;
+            background:#015677;
+
+        }
+    </style>
 </head>
 <body>
-    <div>
+    <div class="container">
         <ul>
             <li>
                 1、audio音频 html5提供播放音、视频文件的标准
@@ -19,14 +31,18 @@
                 source 规定多媒体资源 ，可以使多个
             </li>
         </ul>
-        <button onclick = "bofang()">播放/暂停</button>
+        <button id="btn" onclick = "bofang()">播放/暂停</button>
         <audio id="aud" src="https://m7.music.126.net/20190108171700/7c01f4f9b5c2b4cead53211b98ac8a9c/ymusic/b859/cc34/7579/d4775a3cc496a1a1deb5ea5a48c8daa6.mp3" controls="controls">mp3</audio>
         <input id="txt" type="text">
+        <span onclick="defut()">更改</span>
     </div>
     <script>
         var aa = document.querySelector("#aud");
         var static = 1;
-        aa.defaultPlaybackRate = document.querySelector("#txt")
+        function defut(){
+            aa.defaultPlaybackRate = document.querySelector("#txt").value;
+            console.log(aa)
+        }
         function bofang(){
             static ++
            if(static%2 == 0){

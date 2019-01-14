@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>HELLO WORLD</title>
+    <script type="text/javascript" src="http://api.tianditu.com/api?v=4.0"></script>
+    <script>
+        var map;               //地图对象123
+        var zoom = 12;         //层级，值越大，地图范围越小
+        var lon = 116.40769;   //经度
+        var lat = 39.89945;    //纬度
+        var t = new T.LngLat(lon, lat);
+        function onLoad() {
+            map = new T.Map('mapDiv');
+            map.centerAndZoom(t, zoom);
+        }
+
+        function query(){
+            lon = document.getElementById('lon').value;
+            lat = document.getElementById('lat').value;
+            if(lon == '' || lon == null) lon = 116.40769;
+            if(lat == '' || lat == null) lat = 139.89945;
+            t = new T.LngLat(lon, lat);
+            map.centerAndZoom(t, zoom);
+        }
+    </script>
+</head>
+<body onLoad="onLoad()">
+<div>
+    经度：<input type='text' id='lon'/>&nbsp;&nbsp;&nbsp;&nbsp;
+    纬度：<input type='text' id='lat'/>
+    <input type = 'button' value = '查询坐标点' onclick='query();'/>
+</div>
+<div id="mapDiv" style="position:absolute;width:800px; height:600px"></div>
+</body>
+</html>
