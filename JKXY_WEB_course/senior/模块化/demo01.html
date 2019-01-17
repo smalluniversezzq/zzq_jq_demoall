@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript模块化概念</title>
+</head>
+<body>
+    AMD是RequireJS在推广过程中对模块定义的规范化产物  
+    异步加载，依赖前置，提前执行
+    Define定义模块define(["require","foo"],function(){return}) ;
+    Require 加载模块（依赖前置）require(["foo",'bar'],function(foo,bar){});
+
+    CMD是SeaJS推广过程中对模块化的规范化产物
+    Define定义exports导出 define(function(require,exports,module){});
+    module上存储了当前模块上的一些对象.
+    require(./a)直接引入。Require.async异步引入
+    同步加载，依赖就近，延迟执行
+    AMD CMD的区别
+    
+</body>
+</html>
