@@ -1,0 +1,7 @@
+<!--pages/demo15/demo15.wxml-->
+<text>radio</text>
+<radio-group bindchange="handleChange">
+  <radio color='red' value='man'>男</radio>
+  <radio color='red' value='woman'>女</radio>
+</radio-group>
+<view>{{gender}}</view>

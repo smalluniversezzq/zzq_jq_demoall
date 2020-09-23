@@ -1,0 +1,4 @@
+<!--pages/demo11/demo11.wxml-->
+<text> 导航组件 navigator 超链接</text>
+<navigator url='/pages/demo10/demo10'>to轮播图</navigator>
+<navigator url='/pagesindex/index'>toindex图</navigator>

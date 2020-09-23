@@ -13,5 +13,6 @@
   },
   "requiredBackgroundModes": [
     "audio"
-  ]
+  ],
+  "sitemapLocation": "sitemap.json"
 }

@@ -7,13 +7,12 @@
     "pages/user/user",
     "pages/article01/article01",
     "pages/blog/blog"
-
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#1888fc",
     "navigationBarTitleText": "旅游攻略",
-    "navigationBarTextStyle": "black "
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "list": [
@@ -30,5 +29,6 @@
         "selectedIconPath": "images/ic_join_pressed.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

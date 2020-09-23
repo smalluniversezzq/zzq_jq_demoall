@@ -1,5 +1,6 @@
       
 <!-- <navigator url="../home/home"  open-type="navigete">navigator</navigator> -->
-<view bindtap="switchTabs">login</view>
-<view>
+<view class="login-style" bindtap="switchTabs">去登陆吧</view>
+<view class='txt'>
+  这个位置容易看到
 </view>

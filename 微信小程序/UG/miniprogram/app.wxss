@@ -1,0 +1,5 @@
+@import "style/iconfont.wxss";
+@import "style/guide.wxss";
+/* page{
+  --commomBgColor:#d81e06;
+} */

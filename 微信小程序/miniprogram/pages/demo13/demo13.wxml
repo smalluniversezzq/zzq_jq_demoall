@@ -1,0 +1,4 @@
+<!--pages/demo13/demo13.wxml-->
+<text>button</text>
+<button size='mini' type='warn'>我是button</button>
+<button size='mini' type='warn' open-type='getUserInfo' bindgetuserinfo="getUserInfo">获取个人信息</button>

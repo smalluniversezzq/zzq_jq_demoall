@@ -1,0 +1,14 @@
+<swiper autoplay='true' interval='1000' circular="true">
+  <swiper-item>
+    <image mode="widthFix" src="//gw.alicdn.com/bao/uploaded/i1/4093769125/O1CN01ta73Zu2HHIgPlERgU_!!0-item_pic.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="//gw.alicdn.com/bao/uploaded/i1/3300550385/O1CN01MlOOqt1EiN4mjAVy6_!!0-item_pic.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="//gw.alicdn.com/bao/uploaded/i1/2744801336/O1CN01f5I97N1LjvjTInf2r_!!0-item_pic.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="//gw.alicdn.com/bao/uploaded/i1/1917047079/O1CN01wDZzJk22AEL8RvrHh_!!2-item_pic.png"></image>
+  </swiper-item>
+</swiper>

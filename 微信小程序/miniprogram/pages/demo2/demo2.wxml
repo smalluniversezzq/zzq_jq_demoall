@@ -1,0 +1,4 @@
+<!--pages/demo2/demo2.wxml-->
+<input type="text" bindinput="handInputchange"/>
+<view>{{num}}</view>
+<image mode="" src="//gw.alicdn.com/bao/uploaded/i1/4093769125/O1CN01ta73Zu2HHIgPlERgU_!!0-item_pic.jpg"></image>

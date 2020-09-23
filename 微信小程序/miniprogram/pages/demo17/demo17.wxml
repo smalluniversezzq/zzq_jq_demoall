@@ -1,0 +1,7 @@
+<!--pages/demo17/demo17.wxml-->
+<tabs tabs="{{tabs}}" binditemChange="ItemChange">
+  <block wx:if="{{tabs[0].isActive}}">0</block>
+  <block wx:elif="{{tabs[1].isActive}}">1</block>
+  <block wx:elif="{{tabs[2].isActive}}">2</block>
+  <block wx:else>3</block>
+</tabs>

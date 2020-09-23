@@ -1,0 +1,15 @@
+<view>
+  <checkbox-group  bindchange='handleChange'>
+    <checkbox 
+    color='#00aaee'
+    wx:for="{{fruits}}" 
+    wx:for-item='item'  
+    wx:for-index='index' 
+    wx:key='this'
+    value='{{item.name}}'>
+    {{item.name}}</checkbox>
+  </checkbox-group>
+  <view>
+    {{getfruits}}
+  </view>
+</view>

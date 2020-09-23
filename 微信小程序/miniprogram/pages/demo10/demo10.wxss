@@ -1,0 +1,11 @@
+/* pages/demo10/demo10.wxss */
+
+image{
+  width: 185px;
+}
+swiper{
+  margin: 0 auto;
+  width: 183px;
+  height: 185px;
+  border: 1px solid #fff;
+}
