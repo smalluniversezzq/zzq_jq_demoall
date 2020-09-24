@@ -1,3 +1,18 @@
 <view>
   <searchInput></searchInput>
+  <view class="swiper_box">
+    <swiper circular autoplay indicator-dots="true">
+      <swiper-item  wx:for="{{swiperDate}}" wx:key="index" >
+        <navigator>
+          <image class="swiper-image" src='{{item.image_src}}' mode="widthFix"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="cate-box">
+    <navigator src="/pages/goods_detail/main?goods_id=129"  open-type='navigate' class='cate-navigator' wx:for="{{cateDate}}" wx:key="name">
+      <image class='cate-image' src='{{item.image_src}}' mode="widthFix"></image>
+    </navigator>
+  </view>
+  
 </view>
