@@ -1,2 +1,29 @@
-<!--pages/catrgory/index.wxml-->
-<text>pages/catrgory/index.wxml</text>
+<view class="cates">
+  <searchInput></searchInput>
+  <view class="cates-container">
+    <scroll-view  class="left-menu-list" scroll-y>
+      <view 
+      class="menu-item {{index===currentIndex?'active':''}}" 
+      wx:for='{{categorieList}}' 
+      wx:key="*this"
+      bindtap="handleItemTap"
+      data-index='{{index}}'
+      >
+        {{item.cat_name}}
+      </view>
+    </scroll-view>
+    <scroll-view class="right-content"  scroll-y>
+      <view class="content-item" wx:for='{{categorieList[currentIndex].children}}' wx:for-item='itemCate' wx:key="*this">
+       <view class="goods-title">
+        / {{itemCate.cat_name}} /
+       </view>
+       <view class="goods-list">
+         <view class="goods-item" wx:for="{{itemCate.children}}" wx:for-item="cateChild" wx:key="cateChild.cat_pid">
+           <image class='goods-item-pic' mode='widthFix' src="{{cateChild.cat_icon}}"></image>
+           <view class='goods-item-title'>{{cateChild.cat_name}}</view>
+         </view>
+       </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

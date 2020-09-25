@@ -14,5 +14,18 @@
       <image class='cate-image' src='{{item.image_src}}' mode="widthFix"></image>
     </navigator>
   </view>
+  <view class="floor-box">
+    <view class="floor-list" wx:for="{{floorList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <image class='floor-title-image' src="{{item.floor_title.image_src}}" mdoe="widthFix"></image>
+      <view class="product-box">
+        <view class="floor-product-list" wx:for="{{item.product_list}}" wx:for-item="im" wx:for-index="ix" wx:key="ix">
+          <navigator  class="{{ix===0?'floor-produc-pic-box':'floor-produc-pic-boxs'}}">
+             <image src="{{im.image_src}}"  mode="scaleToFill" class="floor-product-image">
+            </image>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
   
 </view>

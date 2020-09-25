@@ -3,3 +3,6 @@
 /* page{
   --commomBgColor:#d81e06;
 } */
+image{
+  width: 100%;
+}
