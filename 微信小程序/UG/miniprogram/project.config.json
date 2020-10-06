@@ -80,6 +80,14 @@
           "id": -1,
           "name": "分类",
           "pathName": "pages/catrgory/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "商品列表",
+          "pathName": "pages/goods_list/index",
+          "query": "pic=6",
           "scene": null
         }
       ]

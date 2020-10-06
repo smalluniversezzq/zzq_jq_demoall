@@ -8,26 +8,26 @@ Page({
   },
   getSwiperFn(){
     console.log('执行请求前')
-    request({url: "https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata"}).then(res=>{
+    request({url: "/home/swiperdata"}).then(res=>{
       console.log(res);
       this.setData({
-        swiperDate:res.data.message
+        swiperDate:res
       })
     })
   },
   getCateFn(){
-    request({url:"https://api-hmugo-web.itheima.net/api/public/v1/home/catitems"}).then(res=>{
+    request({url:"/home/catitems"}).then(res=>{
       console.log(res)
       this.setData({
-        cateDate:res.data.message
+        cateDate:res
       })
     })
   },
   getFloorFn(){
-    request({url:"https://api-hmugo-web.itheima.net/api/public/v1/home/floordata"}).then(res=>{
+    request({url:"/home/floordata"}).then(res=>{
       console.log(res,'floor')
       this.setData({
-        floorList:res.data.message
+        floorList:res
       })
     })
   },

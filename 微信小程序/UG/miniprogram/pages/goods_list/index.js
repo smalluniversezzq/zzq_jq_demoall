@@ -1,66 +1,87 @@
-// pages/goods_list/index.js
+import {request} from "../../request/index.js"
+import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
+    tabs:[
+      {
+        id:0,
+        value:"综合",
+        isActive:true
+      },
+      {
+        id:1,
+        value:"销量",
+        isActive:false
+      },
+      {
+        id:2,
+        value:"价格",
+        isActive:false
+      },
+    ],
+    parameter:"",
+    goods_list:"",
+    total:"",
+
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  queryParams:{
+    query:"",
+    cid:"",
+    pagenum:1,
+    pagesize:10
+  },
+  //总页数
+  totalPages:1,
   onLoad: function (options) {
-
+    console.log(options)
+    // this.parameter
+      this.queryParams.cid=options.pic
+    this.getGoodsSearchFn()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handChangetabs(e){
+    const index = e.detail.index;
+    let {tabs} = this.data;
+    console.log(e,'handChangetabs',index)
+    tabs.forEach((v,i)=>{
+      i===index?v.isActive=true:v.isActive=false
+    })
+    console.log(tabs)
+    this.setData({
+      tabs
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  async getGoodsSearchFn(){
+    console.log(this.queryParams)
+    const res = await request({url:"/goods/search",data:this.queryParams})
+    const total = res.total;
+    this.totalPages = Math.ceil(total/this.queryParams.pagesize);
+    // const totalPages = Math.ceil(total/this.queryParams.pagesize);
+    console.log(this.totalPages,'totalPages','total',total,this.queryParams.pagesize);
+    console.log(res)
+    this.setData({
+      goods_list:[...this.data.goods_list,...res.goods]
+    })
+    wx.stopPullDownRefresh()
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  methods:{
+ 
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  onReachBottom(){
+    console.log('触底了',this.queryParams.pagenum,this.totalPages)
+    if(this.queryParams.pagenum >= this.totalPages){
+      wx.showToast({title:'没有数据'})
+    }else{
+      this.queryParams.pagenum++;
+      this.getGoodsSearchFn()
+    }
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onPullDownRefresh(){
+    console.log('下拉')
+    this.setData({
+      goods_list:[]
+    })
+    this.queryParams.pagenum = 1;
+    this.getGoodsSearchFn()
   }
 })

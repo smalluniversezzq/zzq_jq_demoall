@@ -12,16 +12,21 @@
         {{item.cat_name}}
       </view>
     </scroll-view>
-    <scroll-view class="right-content"  scroll-y>
+    <scroll-view scroll-top="{{scrollTop}}" class="right-content"  scroll-y>
       <view class="content-item" wx:for='{{categorieList[currentIndex].children}}' wx:for-item='itemCate' wx:key="*this">
        <view class="goods-title">
         / {{itemCate.cat_name}} /
        </view>
-       <view class="goods-list">
-         <view class="goods-item" wx:for="{{itemCate.children}}" wx:for-item="cateChild" wx:key="cateChild.cat_pid">
+        <view class="goods-list">
+          <navigator class="goods-item" 
+            wx:for="{{itemCate.children}}" 
+            wx:for-item="cateChild" 
+            wx:key="cateChild.cat_pid"
+            url="/pages/goods_list/index?cid={{cateChild.cat_id}}"
+          >
            <image class='goods-item-pic' mode='widthFix' src="{{cateChild.cat_icon}}"></image>
            <view class='goods-item-title'>{{cateChild.cat_name}}</view>
-         </view>
+         </navigator>
        </view>
       </view>
     </scroll-view>

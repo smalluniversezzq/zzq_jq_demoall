@@ -1,2 +1,21 @@
-<!--pages/goods_list/index.wxml-->
-<text>pages/goods_list/index.wxml</text>
+<view class="goods_list">
+  <searchInput></searchInput>
+  <tabs tabs="{{tabs}}" bindtabsChange="handChangetabs"></tabs>
+  <view>
+    <block wx:if="{{tabs[0].isActive}}">
+      <view class="first-tab">
+        <navigator class="goods-item" wx:for="{{goods_list}}" wx:key="cat_id">
+          <view class="goods-img-wrap">
+            <image mode='widthFix' src='{{item.goods_small_logo?item.goods_big_logo:"http://eborder.oss-cn-zhangjiakou.aliyuncs.com/8_20200930154337_09801.png"}}'></image>
+          </view>
+          <view class="goods-info-wrap">
+            <view class="goods-name">{{item.goods_name}}</view>
+            <view class="goods-price">￥{{item.goods_price}}</view>
+          </view>
+        </navigator>
+      </view>
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}">1</block>
+    <block wx:elif="{{tabs[2].isActive}}">2</block>
+  </view>
+</view>
