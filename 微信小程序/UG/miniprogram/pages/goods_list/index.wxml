@@ -4,7 +4,13 @@
   <view>
     <block wx:if="{{tabs[0].isActive}}">
       <view class="first-tab">
-        <navigator class="goods-item" wx:for="{{goods_list}}" wx:key="cat_id">
+        <navigator 
+        class="goods-item" 
+        wx:for="{{goods_list}}" 
+        wx:key="cat_id"
+        url="/pages/goos_detail/index?cid={{item.cat_id}}"
+        open-type="navigate"
+        >
           <view class="goods-img-wrap">
             <image mode='widthFix' src='{{item.goods_small_logo?item.goods_big_logo:"http://eborder.oss-cn-zhangjiakou.aliyuncs.com/8_20200930154337_09801.png"}}'></image>
           </view>

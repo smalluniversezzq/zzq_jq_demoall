@@ -34,9 +34,9 @@ Page({
   //总页数
   totalPages:1,
   onLoad: function (options) {
-    console.log(options)
+    console.log(options,'options')
     // this.parameter
-      this.queryParams.cid=options.pic
+      this.queryParams.cid=options.cid
     this.getGoodsSearchFn()
   },
   handChangetabs(e){

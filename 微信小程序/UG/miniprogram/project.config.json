@@ -87,7 +87,7 @@
           "id": 2,
           "name": "商品列表",
           "pathName": "pages/goods_list/index",
-          "query": "pic=6",
+          "query": "pid=6",
           "scene": null
         }
       ]

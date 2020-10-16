@@ -18,6 +18,7 @@
         / {{itemCate.cat_name}} /
        </view>
         <view class="goods-list">
+          {{cateChild}}
           <navigator class="goods-item" 
             wx:for="{{itemCate.children}}" 
             wx:for-item="cateChild" 
