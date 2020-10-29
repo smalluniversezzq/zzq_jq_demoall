@@ -1,1 +1,133 @@
-/* pages/user/index.wxss */
+page{
+  background: #edece8;
+}
+.user-info-wrap{
+  width: 100%;
+  height: 400rpx;
+  overflow: hidden;
+  background: #d81e06;
+}
+.user-img-wrap{
+  position: relative;
+}
+.user-bg{
+  width: 100%;
+  height: 500rpx;
+  filter: blur(10rpx);
+  margin-top: -100rpx;
+}
+.user_info{
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  /* transform: translateX(-50%); */
+  margin-top: -75rpx;
+  margin-left: -75rpx;
+  text-align: center;
+}
+.user_info image{
+  width: 150rpx;
+  height: 150rpx;
+  border: 1rpx solid #fff;
+  border-radius:75rpx;
+  overflow: hidden;
+}
+.user-name{
+  color: #ffffff;
+  margin-top: 30rpx;
+}
+
+/* //登录按钮 */
+.tologin{
+  text-align: center;
+  margin: 250rpx auto;
+  border: 1px solid #fff;
+  border-radius: 50rpx;
+  width: 150rpx;
+  height: 75rpx;
+  color: #ffff;
+  line-height: 75rpx;
+}
+.user-content{
+  position: relative;
+}
+.user-main {
+  position: absolute;
+  top: -30rpx;
+  left: 50%;
+  width: 90%;
+  height: 100rpx;
+  transform: translateX(-50%);
+}
+.collection{
+  background: #fff;
+  height: 100rpx;
+  padding: 10rpx;
+  display: flex;
+  flex: wrap;
+  border-radius: 10rpx;
+}
+.collection > navigator{
+  width: 25%;
+  text-align: center;
+}
+.his-num{
+  color:#db639b;
+}
+.his-name{
+  color: #707070;
+}
+.order{
+  background: #fff;
+  border-radius: 10rpx;
+}
+.order-title{
+  border-bottom: 1rpx solid #707070;
+  padding: 10rpx;
+  color: #707070; 
+}
+.order-content{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rpx;
+
+}
+.order-content > navigator{
+  width: 25%;
+  text-align: center;
+  color: #707070; 
+}
+.order-ico{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto;
+}
+.address{
+  background: #fff;
+  padding: 10rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #707070;
+  border-radius: 10rpx;
+}
+.setting-list{
+  background: #fff;
+  /* padding: 10rpx; */
+  color: #707070;
+  border-radius: 10rpx;
+}
+.setting-list>view{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 10rpx;
+}
+.setting-list > view:nth-child(1),.setting-list > view:nth-child(2){
+  border-bottom: 1rpx solid #707070;
+}
+.kefu{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+

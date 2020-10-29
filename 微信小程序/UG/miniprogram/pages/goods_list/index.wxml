@@ -8,7 +8,7 @@
         class="goods-item" 
         wx:for="{{goods_list}}" 
         wx:key="cat_id"
-        url="/pages/goos_detail/index?cid={{item.cat_id}}"
+        url="/pages/goods_detail/index?cid={{item.cat_id}}"
         open-type="navigate"
         >
           <view class="goods-img-wrap">

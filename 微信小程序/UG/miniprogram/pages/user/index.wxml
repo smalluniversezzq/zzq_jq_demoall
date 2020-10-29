@@ -1,2 +1,89 @@
-<!--pages/user/index.wxml-->
-<text>pages/user/index.wxml</text>
+
+<view>
+  <view class="user-info-wrap">
+    <view  wx:if="{{userInfo.nickName}}" class="user-img-wrap">
+      <image mode="widthFix" src="{{userInfo.avatarUrl}}" class="user-bg"></image>
+      <view class="user_info">
+        <image mode="widthFix" src="{{userInfo.avatarUrl}}" class="user-ico"></image>
+        <view class="user-name">{{userInfo.nickName}}</view>
+      </view>
+    </view>
+    <view wx:else class="tologin">
+      <navigator url="/pages/login/index">登录</navigator>
+    </view>
+  </view>
+  <view class="user-content">
+    <view class="user-main">
+      <view class="collection">
+        <navigator>
+          <view class="his-num">0</view>
+          <view class="his-name">收藏的店铺</view>
+        </navigator>
+        <navigator>
+          <view class="his-num">0</view>
+          <view class="his-name">收藏的商品</view>
+        </navigator>
+        <navigator>
+          <view class="his-num">0</view>
+          <view class="his-name">关注的商品</view>
+        </navigator>
+        <navigator>
+          <view class="his-num">0</view>
+          <view class="his-name">我的足迹</view>
+        </navigator>
+      </view>
+      <view class="order  mt">
+        <view class="order-title">
+          我的订单
+        </view>
+        <view class="order-content">
+          <navigator>
+            <view class="order-ico">
+              <image mode="widthFix" src="../../icons/order.png"></image>
+            </view>
+            <view class="order-name">全部订单</view>
+          </navigator>
+          <navigator>
+            <view class="order-ico">
+              <image mode="widthFix" src="../../icons/payment.png"></image>
+            </view>
+            <view class="order-name">代付款</view>
+          </navigator>
+          <navigator>
+            <view class="order-ico">
+              <image mode="widthFix" src="../../icons/payment.png"></image>
+            </view>
+            <view class="order-name">待收货</view>
+          </navigator>
+          <navigator>
+            <view class="order-ico">
+              <image mode="widthFix" src="../../icons/returngoods.png"></image>
+            </view>
+            <view class="order-name">退款/退货</view>
+          </navigator>
+        </view>
+      </view>
+      <view class="address mt">
+        <navigator>
+          <view>收货地址管理</view>
+        </navigator>
+      </view>
+      <view class="setting-list mt">
+        <view class="kefu">
+          <view class="kefu-txt">联系客服</view>
+          <view class="kefu-del">400-5500-6600</view>
+        </view>
+        <view class="kefu">
+          <view class="kefu-txt">意见反馈</view>
+          <view class="kefu-del"></view>
+        </view>
+        <view class="kefu">
+          <view class="kefu-txt">关于我们</view>
+          <view class="kefu-del"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

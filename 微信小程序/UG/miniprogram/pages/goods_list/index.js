@@ -22,8 +22,6 @@ Page({
     parameter:"",
     goods_list:"",
     total:"",
-
-
   },
   queryParams:{
     query:"",

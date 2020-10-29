@@ -1,2 +1,81 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<view class="cart">
+  <view class="address">
+    <view class="address-btn"  wx:if="{{!address.userName}}" >
+      <button bindtap="handleChooseAddress" type="primary" plain>获取收货地址</button>
+    </view>
+    <view wx:else class='address-info'>
+      <view class="user_info" >
+        <view>收件人:{{address.userName}}</view>
+        <view  >{{address.all}}</view>
+      </view>
+      <view class="user-phone">
+        <view>{{address.telNumber}}</view>
+        <!-- <view class="tar mt" bindtap="delAddress">
+          删除
+        </view> -->
+      </view>
+    </view>
+  </view>
+  <!-- 购物车功能 -->
+  <view class="cart-content">
+    <view class="card-title">购物车</view>
+    <block wx:if="{{cartInfo.length!==0}}">
+      <view class="card-list mb" wx:for="{{cartInfo}}">
+        <!-- 复选框 -->
+        <view class="card-checkbox">
+          <checkbox-group data-id="{{item.goods_id}}" bindchange="handleTiemChange">
+            <checkbox checked="{{item.check}}">
+            </checkbox>
+          </checkbox-group>
+        </view>
+        <!-- 商品图片 -->
+        <navigator class="cart-ima-wrap">
+          <image mode="widthFix" src="{{item.goods_big_logo}}"></image>
+        </navigator>
+        <!-- 商品信息 -->
+        <view class="cart-info">
+          <view class="card-name">{{item.goods_name}}</view>
+          <view class="goods-price-wrap">
+            <view class="goods-price">
+              ￥{{item.goods_price}}
+            </view>
+            <view class="cart-num-tool">
+              <view bindtap="handleTiemNumEdit" data-id="{{item.goods_id}}" data-operation="{{-1}}" class="num-edit">-</view>
+              <view class="goods-num-edit">{{item.num}}</view>
+              <view bindtap="handleTiemNumEdit" data-id="{{item.goods_id}}" data-operation="{{1}}" class="num-edit">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block  wx:else  >
+      <view class='empty-box'>
+        <image mode="widthFix" src="../../icons/empty.png"></image>
+      </view>
+      <view class='empty-txt'>
+        购物车空空如也，快去挑选中意的商品吧~
+      </view>
+    </block>
+  </view>
+  <!-- 购物车结算 -->
+  <view class="footer-tool">
+    <!-- 全选 -->
+    <view class="add-check-wrap">
+      <checkbox-group bindchange="handleAllChangle">
+        <checkbox checked="{{allChecked}}">
+        </checkbox>全选
+      </checkbox-group>
+    </view>
+    <!-- 总价格 -->
+    <view class="total-price-box">
+      <veiw class="total-price">
+        合计：<text class="total-price-text">￥{{totalPrice}}</text>
+      </veiw>
+      <view>包含运费</view>
+    </view>
+    <!-- 结算 -->
+    <view class="order-pay-wrap" bindtap="settlement">
+      结算({{totalNum}})
+    </view>
+  </view>
+</view>

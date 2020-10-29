@@ -1,2 +1,65 @@
-<!--pages/goos_detail/index.wxml-->
-<text>pages/goos_detail/index.wxml</text>
+<view class="goods-detail-view">
+    <swiper class='swiper-box' circular autoplay indicator-dots="true">
+      <swiper-item 
+      bindtap="handlePicChange" 
+      data-url="{{item.pics_mid_url}}"
+      wx:for="{{goodsDetail.pics}}" 
+      wx:key="index" >
+        <navigator>
+          <image class="swiper-image" src='{{item.pics_mid_url}}' mode="widthFix"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+    <view class="goods-price">
+      ￥{{goodsDetail.goods_price}}
+    </view>
+    <view class="goods-name-row">
+      <view class="goods-name">
+        {{goodsDetail.goods_name}}
+      </view>
+      <view class="goods-collect">
+        <view class="goods-collect-pic">
+          <image mode="widthFix" src="../../icons/collect.png" ></image>
+        </view>
+        <view class="collection">
+          {{"收藏"}}
+        </view>
+      </view>
+    </view>
+    <view class="detail-content">
+      <view class="detail-content-title">
+       图文详情
+      </view>
+      <view>
+      <rich-text  nodes="{{goodsDetail.goods_introduce}}"></rich-text>
+      </view>
+    </view>
+    <view class="tool">
+      <view class="tool_item service" >
+        <view class="iconfont">
+          <image mode="widthFix" src="../../icons/service.png"></image>
+        </view>
+        <view>客服</view>
+        <button open-type="contact"></button>
+      </view>
+      <view class="tool_item share">
+        <view class="iconfont">
+          <image mode="widthFix" src="../../icons/share.png"></image>
+        </view>
+        <view>分享</view>
+        <button open-type="share"></button>
+      </view>
+      <navigator open-type="switchTab" url="/pages/cart/index" class="tool_item">
+        <view class="iconfont">
+          <image mode="widthFix" src="../../icons/cartone.png"></image>
+        </view>
+        <view>购物车</view>
+      </navigator>
+      <view class="tool_item btn-card" bindtap="addCart">
+        <view>加入购物车</view>
+      </view>
+      <view class="tool_item btn-buy">
+        <view>立即购买</view>
+      </view>
+    </view>
+</view>
