@@ -1,0 +1,182 @@
+特性
+  1.提供基于egg定制上层框架的能力
+  2.高度扩展性插件机制
+  3.内置多进程管理
+  4.基于koa开发性能优异
+  5.框架稳定.测试覆盖率高
+  6.渐进式开发
+
+官网
+https://eggjs.org/zh-cn/intro/quickstart.html
+方法1 安装介绍  
+  1.初始化
+  $ mkdir egg-example && cd egg-example
+  $ npm init egg --type=simple  
+  $ npm i
+  2.启动项目
+  $ npm run dev
+  $ open http://localhost:7001
+  3.目录介绍
+  app目录为主文件，数据库操作 业务逻辑
+  config 针对egg插件配置
+  test 单元测试 
+  .autod.conf autod配置文件
+
+方法2 初始化安装项目 
+  npm i egg-init -g
+  egg-init cms-api --type=simple
+  cd cms-api
+  npm i
+  npm run dev
+
+
+创建数据库
+  打开 navicat  链接数据库
+  找到localhost 右键创建数据库  数据库名:项目名 字符集：utf8mb64  排序规则 ：utf8m64_bin
+创建表 
+
+
+
+
+
+
+路由 router
+  路由
+  module.exports = app => {
+  const { router, controller } = app;
+  router.get('/', controller.home.index);
+  router.get('/product',controller.product.index);
+  router.resources('user','/api/user',controller.user);
+  // app.resources('routerName','pathMatch','controller')
+  routerName 名字
+  pathMatch 路径
+  controller 类的实例
+
+};
+  请求两种传参方式
+  query
+    ctx.body = `ctx.query ${ctx.query.id}`
+  params
+    需要在路由配置
+    router.get('/product/detail2/:id',controller.product.detail2);  
+    ctx.body = `ctx.params ${ctx.params.id}`
+
+
+  controller 控制器
+const { Controller } = require('egg');
+class UserController extends Controller {
+  async index() {
+    const { ctx, service } = this;
+    let users = await service.user.list();
+    ctx.body = users;
+  }
+}
+module.exports = UserController;
+
+
+
+其他请求方式
+
+  
+service服务  (链接数据库 可以写数据库的增删改查等逻辑)
+  1.controller中逻辑更加简洁
+  2.保持业务逻辑的独立性,抽象出来的service可以被多个controller重复调用
+  3.将逻辑和展现分离，更容易编写测试用例
+
+  查询数据
+
+
+
+
+模板使用
+  安装插件
+  npm i egg-view-ejs --save
+  地址
+  https://www.npmjs.com/package/egg-view-ejs
+
+
+
+链接mysql
+安装  egg-mysql
+npm i --save egg-mysql
+或者
+cnpm i egg-mysql -S
+
+
+开启插件
+// config/plugin.js
+exports.mysql = {
+  enable: true,
+  package: 'egg-mysql',
+};
+链接数据库
+单数据源
+路径 config/config.default.js
+
+
+// config/config.${env}.js
+exports.mysql = {
+  //向app多挂一层 可以使用app.mysql.select() query()
+  package:'egg-mysql',
+  enable:true, 
+  // 单数据库信息配置
+  client: {
+    // host
+    host: 'mysql.com',
+    // 端口号
+    port: '3306',
+    // 用户名
+    user: 'test_user',
+    // 密码
+    password: 'test_password',
+    // 数据库名
+    database: 'test',
+  },
+  // 是否加载到 app 上，默认开启
+  app: true,
+  // 是否加载到 agent 上，默认关闭
+  agent: false,
+};
+
+
+
+post请求 scrf 
+在config/config.default.js 加入
+  config.security = {
+    csrf: {
+      enable: false,
+    },
+  };
+
+
+moment 时间处理插件
+npm
+cnpm i --save moment
+
+
+前后段联调
+1创建前端代理
+
+module.exports ={
+  devServer:{
+    proxy:{
+      '/article':{  // 如果检测到以article 开头的请求的时候，就将代理到目标服务器上去
+        target:"http://lcoalhost:7001",
+        ws:true,   // 允许 websoket请求
+        changeOrgin:true  //开启虚拟服务器，并且让虚拟服务器请求代理服务器，这样相当于两台服务器间的交互不用担心跨域问题
+      }
+    }
+  }
+}
+
+
+使用uuid
+
+cnpm i uuid -S
+const uuid = require('uuid');
+user.uuid = uuid.v4();
+
+
+
+
+

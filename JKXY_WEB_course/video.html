@@ -7,20 +7,23 @@
     <title>video</title>
     <style>
         .video{
-            width: 400px;
+            width: 1400px;
         }
 
     </style>
 </head>
 <body>
     <span class="bandz" onclick="bandzs()">播放/暂停</span>
-    <video class="video">
+    <video class="video" controls="controls">
         <source  src="myvideo.mp4">  
         您的浏览器不支持</video>
     <script>
         var v = document.querySelector(".video");
         function videoblay(){
             
+        }
+        function bandzs(){
+          console.log("clickme")
         }
     </script>
 </body>
