@@ -1,21 +1,27 @@
-const { Service } = require('egg');
-class UserService extends Service {
-  async list() {
-    const result = await this.app.mysql.select("user");
-    return result;
+const BaseService = require('./base');
+class Service extends BaseService {
+  constructor(...args) {
+    super(...args)
+    this.entity = "user"
   }
-  async create(user) {
-    const result = await this.app.mysql.insert("user", user);
-    return result
+  async signup(data){
+    const { app } =this;
+    const result = await app.mysql.insert("user",data);
+    console.log(result)
+    if(result.affectedRows > 0){
+      return true
+    }else{
+      return false
+    }
   }
-  async update(user) {
-    console.log(user,"user")
-    return await this.app.mysql.update("user", user);
-  }
-  async destroy(id) {
-    console.log(id)
-    const result = await this.app.mysql.delete("user", { id });
+  async signin(username,password){
+    const { app } = this;
+    const result = await app.mysql.select("user",{
+      where: { username , password },
+      limit: 1,
+    });
+    console.log(result,"返回结果")
     return result
   }
 }
-module.exports = UserService;
+module.exports = Service;

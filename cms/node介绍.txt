@@ -68,6 +68,8 @@ class UserController extends Controller {
   async index() {
     const { ctx, service } = this;
     let users = await service.user.list();
+    // 获取参数
+    const check = ctx.request.body.captcha;
     ctx.body = users;
   }
 }
@@ -170,13 +172,66 @@ module.exports ={
 }
 
 
-使用uuid
 
+判断接口是否执行成功
+service
+  async create(entity) {
+    const result = await this.app.mysql.insert(this.entity, entity);
+    console.log(result,"result")  判断result状态
+    return result.serverStatus > 0
+  }
+
+  affectedRows:1  // 
+  inserId:
+  //服务器状态
+  serverStatus:2
+  warningCount:0
+  message:"",
+  protocol:true
+  changeRows:0
+
+第三方模块
+
+生成uid
+使用uuid
 cnpm i uuid -S
 const uuid = require('uuid');
 user.uuid = uuid.v4();
 
+生成图片 captcha
 
+cnpm i svg-captcha -S
+const svgCaptcha = require("svg-captcha");
+ 
+生成token
+cnpm i jsonwebtoken -S
+const { sign } = require("jsonwebtoken")
+
+
+
+
+跨域
+
+1 开发时跨域问题
+  egg-cors
+  第一步
+  cnpm i egg-cors -S
+   第二步
+  /config/plugin.js
+  exports.cors = {
+    package:"egg-cors",
+    enable:true,
+  }
+  第三步
+  /config/config.default.js
+  userConfig.security = {
+    domainwhiteList:['http://localhost:8000'],
+   
+  }
+
+
+
+前端部分
 
 
 

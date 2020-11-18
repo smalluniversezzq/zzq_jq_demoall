@@ -1,40 +1,57 @@
-const { Controller } = require('egg');
-class UserController extends Controller {
-  async index() {
-    const { ctx, service } = this;
-    let users = await service.user.list();
-    ctx.body = users;
+const BaseController = require("./base");
+const svgCaptcha = require("svg-captcha");
+const { sign } = require("jsonwebtoken")
+class Controller extends BaseController {
+  constructor(...args) {
+    super(...args);
+    this.entity = "user"
   }
-  async create() {
-    const { ctx, service } = this;
-    let user = ctx.request.body;
-    await service.user.create(user);
-    ctx.body = {
-      code: 0,
-      msg: "成功"
+  async captcha() {
+    const { ctx } = this;
+    const CaptchaObj = svgCaptcha.create();
+    console.log(CaptchaObj, "svgCaptchaObj")
+    ctx.session.captcha = CaptchaObj.text;
+    ctx.set("Content-Type", "image/svg+xml");
+    ctx.body = CaptchaObj.data
+  }
+  async checkCaptcha() {
+    const { ctx } = this;
+    const check = ctx.request.body.captcha;
+    console.log(check)
+    if (check === ctx.session.captcha) {
+      ctx.body = {
+        code: 0,
+        mag: "验证成功"
+      }
+    } else {
+      ctx.body = {
+        code: 0,
+        mag: "验证失败"
+      }
     }
   }
-  async update() {
+  async signup() {
     const { ctx, service } = this;
-    console.log(ctx.request)
-    let user = ctx.request.body;
-    let id = ctx.params.id;
-    console.log(user, "usercontrloller")
-    user.id = id;
-    await service.user.update(user);
-    ctx.body = {
-      code: 0,
-      msg: "成功"
+    const data = ctx.request.body;
+    const result = await service.user.signup(data)
+    if (result) {
+      this.success("注册成功")
+    } else {
+      this.success("注册失败")
     }
+    console.log(data)
   }
-  async destroy() {
+  async signin() {
     const { ctx, service } = this;
-    let id = ctx.params.id;
-    await service.user.destroy(id);
-    ctx.body = {
-      code: 0,
-      msg: "成功"
+    const { username, password } = ctx.request.body;
+    const result = await service.user.signin(username, password);
+    if(result && result.length >0){
+      let u =  JSON.parse(JSON.stringify(result[0]))
+      delete u.password;
+      return this.success(sign(u,this.config.jwtSecret));
+    }else{
+      return this.error("登陆失败", 0);
     }
   }
 }
-module.exports = UserController;
+module.exports = Controller;

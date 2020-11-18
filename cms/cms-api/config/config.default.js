@@ -16,16 +16,28 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1604557379397_735';
 
   // add your middleware config here
-  config.middleware = [];
+  //中间件
+  config.middleware = [
+    "auth",
+  ];
 
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
   };
-  // ??
+  // 配置 跨域请求
   userConfig.security = {
     csrf: false,
+    domainWhiteList:["http://localhost:8000"]
   }
+  config.auth = {
+    authUrls:[
+      "/api/role/getUser",
+      "/api/role/setUser",
+    ]
+  }
+  // 配置tioken
+  userConfig.jwtSecret = "zhuzhiqiang"
   config.mysql = {
     // 单数据库信息配置
       client: {
